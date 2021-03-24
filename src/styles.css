@@ -1,1 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+
+html,body{
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeSpeed;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    color: #444444;
+    overflow-x: hidden;
+}
+ol, ul {
+    list-style: none;
+    padding: 0;
+}
+.main{
+    padding-top: 50px;
+}
+.sidemenu-width{
+    flex: 0 0 260px;
+    max-width: 260px;
+}

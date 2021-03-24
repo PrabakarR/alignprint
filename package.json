@@ -21,8 +21,12 @@
     "@angular/router": "~10.0.0-next.0",
     "bootbox": "^5.5.2",
     "bootstrap": "^4.6.0",
+    "bootstrap-icons": "^1.4.0",
     "font-awesome": "^4.7.0",
     "jquery": "^3.6.0",
+    "jquery-slim": "^3.0.0",
+    "ngx-bootstrap-icons": "^1.4.0",
+    "popper.js": "^1.16.1",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"
