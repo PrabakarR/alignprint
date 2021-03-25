@@ -1,10 +1,39 @@
 <app-header></app-header>
 <main class="main">
-    <div class="explore-all">
-        <div class="row">
-            <div class="col-md-3 sidemenu-width">
-                <app-side-menu></app-side-menu>
+
+  <div class="explore-all">
+    <div class="row no-gutters">
+      <div class="col-md-3 sidemenu-width">
+        <app-side-menu></app-side-menu>
+      </div>
+
+      <div class="col-md-9 side-menu-right">
+        <div class="order-right-main">
+          <div class="order-list-container">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <a class="nav-link active" id="open-tab" data-toggle="tab" href="#open" role="tab" aria-controls="open"
+                  aria-selected="true">Open (16)</a>
+              </li>
+              <li class="nav-item" role="presentation">
+                <a class="nav-link" id="closed-tab" data-toggle="tab" href="#closed" role="tab" aria-controls="closed"
+                  aria-selected="false">Closed</a>
+              </li>
+              <li class="nav-item" role="presentation">
+                <a class="nav-link" id="all-tab" data-toggle="tab" href="#all" role="tab" aria-controls="all"
+                  aria-selected="false">All</a>
+              </li>
+            </ul>
+            <div class="right-align-buttons">
+              <button class="btn btn-primary disabled">Print selected orders</button>
+              <button class="btn btn-primary disabled">Download selected orders</button>
+              <button class="btn btn-primary">Add new order</button>
+              <button class="btn btn-primary">Refresh listing</button>
             </div>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
+
 </main>

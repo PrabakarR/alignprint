@@ -1,0 +1,13 @@
+.order-right-main{
+    background: #f2f4f5;
+    padding: 12px;
+    height: 100%;
+}
+.order-list-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+}
+.right-align-buttons .btn:not(:last-child){
+    margin-right: 8px;
+}
