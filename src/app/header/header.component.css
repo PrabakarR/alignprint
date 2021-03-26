@@ -15,13 +15,15 @@
     align-items: center;
     width: 100%;
 }
+.navlisttwo .wrap-bar{
+    margin-left: 10.25rem;
+}
 .navlisttwo .search-bar{
     margin-top: 5px;
     height: 40px;
     margin-bottom: 5px;
     position: relative;
     width: 100%;
-    margin-left: 11rem;
 }
 .search-icon{
     position: absolute;
@@ -75,7 +77,7 @@
     letter-spacing: 0.42px;
 }
 .drop2 .dropdown-toggle {
-    font-size: 20px;
+    font-size: 18px;
 }
 .navbar-innerlistthree .navbar-nav{
   flex-direction: row;
@@ -138,7 +140,7 @@
     margin: 0;
     border-bottom: 1px solid #eee;
     background: #fafafa;
-    font-size: 14px;
+    font-size: 12px;
     color: #000;
     letter-spacing: normal;
     font-weight: 600;
@@ -151,8 +153,8 @@
 }
 .story-list ul li a,.dropdown-item{
     font-size: 12px;
-    padding: 12px 12px 12px 10px !important;
-    font-size: 13px;
+    padding: 8px 12px 10px 10px !important;
+    font-size: 12px;
     font-weight: 500;
     white-space: normal;
 }

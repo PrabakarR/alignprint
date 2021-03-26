@@ -8,6 +8,92 @@
     justify-content: space-between;
     align-items: center; 
 }
+
 .right-align-buttons .btn:not(:last-child){
-    margin-right: 8px;
+    margin-right: 5px;
+}
+.table-align-data-lsit{
+    background: #fff;
+    min-height: 55em;
+    overflow-x: auto;
+    margin-top: 15px;
+}
+.table td, .table th{
+    font-size: 11px;
+    padding: 0.75em 6px;
+    letter-spacing: 0.32px;
+}
+.table td a, .table th a{
+    font-weight: 500;
+}
+.table th{
+    text-align: center;
+}
+.box-space{
+    width: 16px;
+    height: 16px;
+    background: #c2e572;
+    margin-right: 5px;
+    flex: 0 0 auto;
+}
+.box-space.waiting{
+    background-color: #eeeeee
+}
+span.value{
+    display: inline-flex;
+    align-items: center;
+}
+.pagination-main{
+background-color: #fff;
+padding: 20px 12px;
+}
+.pagination-main{
+    display: flex;
+    justify-content: space-between;
+}
+.page-view > div {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+}
+.page-view .pag_previous,.page-view  .pag_next{
+    border: 1px solid #eeeeee;
+    box-shadow: 0 3px 6px 0 rgba(140,152,164,.25)!important;
+    background: #fff;
+    font-weight: 600;
+}
+.page-view .pag_previous i{
+    margin-right: 5px;
+}
+.page-view .pag_next i{
+    margin-left: 5px;
+}
+.pagination_collection{
+    margin: 0 10px;
+}
+.page-view .current {
+    border-color: #ffcc00;
+    background-color: #ffcc00;
+    color: black;
+    cursor: not-allowed;
+}
+.page-view .current, .page-view a{
+    padding: 6px 12px;
+    color: #000;
+}
+.perpage-view{
+    display: flex;
+    flex-wrap: nowrap;
+    flex: 0 0 50%;
+    justify-content: flex-end;
+    align-items: center;
+}
+.perpage-view span > div{
+    display: inline-block;
+    margin-right: 10px;
+}
+.perpage-view span select{
+    width: 80px;
+    display: inline-block;
+    margin-right: 10px;
 }

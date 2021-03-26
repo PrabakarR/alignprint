@@ -15,7 +15,7 @@
 }
 .space-main-x h3 {
     color: #949494;
-    font-size:1em;
+    font-size:12px;
     line-height: 1.1em;
     text-transform: uppercase;
     font-weight: bold;
@@ -30,7 +30,7 @@
     color: #5a5959;
     padding: 4px 5px 4px 15px;
     position: relative;
-    font-size: 13px;
+    font-size: 12px;
     display: flex;
     align-items: center;
     text-decoration: none;

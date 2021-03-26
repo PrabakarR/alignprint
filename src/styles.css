@@ -7,9 +7,10 @@ html,body{
     overflow-wrap: break-word;
     word-wrap: break-word;
     font-size: 14px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
     color: #444444;
     overflow-x: hidden;
+    letter-spacing: 0.42px;
 }
 ol, ul {
     list-style: none;
@@ -19,20 +20,30 @@ ol, ul {
     padding-top: 50px;
 }
 .sidemenu-width{
-    flex: 0 0 230px;
-    max-width: 230px;
+    flex: 0 0 200px;
+    max-width: 200px;
+}
+.sidemenu-width.hides{
+    display: none;
 }
 .side-menu-right{
     flex: 0 0 100%;
-    max-width: calc(100% - 230px);   
+    max-width: calc(100% - 200px);   
+}
+.side-menu-right.shows{
+    flex: 0 0 100%;
+    max-width: 100%;   
+}
+.nav-link,.form-control{
+    font-size: 12px;
 }
 .nav-tabs{
     border-bottom: none;
 }
 .nav-tabs .nav-link{
-    padding: 8px 15px;
+    padding: 8px 13px;
     font-weight: 600;
-    font-size: 14px;
+    font-size: 13px;
     border-radius: 0;
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
@@ -42,7 +53,8 @@ ol, ul {
     border: none;
     box-shadow: 0 3px 6px 0 rgba(140,152,164,.25)!important;
     background: #fff;
-    color: #949494;
+    color: #000;
+    margin-bottom: 0;
 }
 .nav-tabs .nav-link.active{
    background-color: #ffcc00;
@@ -54,9 +66,14 @@ ol, ul {
     -ms-border-radius: 0;
     -o-border-radius: 0;
     font-weight: 600;
-    font-size: 13px;
+    font-size: 12px;
 }
 .btn,a{
     outline: none;
     box-shadow: none !important;
+}
+.form-control:focus{
+    border-color: #000;
+    outline: 0;
+    box-shadow: none;
 }
