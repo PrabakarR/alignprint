@@ -72,8 +72,18 @@ ol, ul {
     outline: none;
     box-shadow: none !important;
 }
+.form-control{
+    padding: 6px;
+}
+.table-responsive .form-control{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
 .form-control:focus{
     border-color: #000;
     outline: 0;
     box-shadow: none;
+}
+.table-responsive table tr td:nth-child(9){
+    width: 95px;
 }
