@@ -22,22 +22,14 @@
     font-size: 11px;
     padding: 0.75em 6px;
     letter-spacing: 0.32px;
+    position: relative;
 }
 .table td a, .table th a{
     font-weight: 500;
 }
 .table th{
     text-align: center;
-}
-.box-space{
-    width: 16px;
-    height: 16px;
-    background: #c2e572;
-    margin-right: 5px;
-    flex: 0 0 auto;
-}
-.box-space.waiting{
-    background-color: #eeeeee
+    position: relative;
 }
 span.value{
     display: inline-flex;
@@ -96,4 +88,26 @@ padding: 20px 12px;
     width: 80px;
     display: inline-block;
     margin-right: 10px;
+}
+.order-valuse-show{
+   position: absolute;
+   top: -15px;
+   left: 50%;
+   transform: translate(-50%,0);
+   -webkit-transform: translate(-50%,0);
+   -moz-transform: translate(-50%,0);
+   -ms-transform: translate(-50%,0);
+   -o-transform: translate(-50%,0);
+   background: #ccc url('/assets/images/button_metal.png') no-repeat;
+   width: 23px;
+   height: 23px;
+   border-radius: 50%;
+   background-size: cover;
+   align-items: center;
+   display: flex;
+   justify-content: center;
+   color: #000;
+   font-weight: 500;
+   text-decoration: none !important;
+   line-height: 1;
 }

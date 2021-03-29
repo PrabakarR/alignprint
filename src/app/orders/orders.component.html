@@ -89,16 +89,48 @@
                             </a>
                           </th>
                           <th scope="col">
-                            <a href="#">
-                            <img src="./assets/images/play-options.png" class="img-fluid" alt="logo">
-                            </a>
+                            <div class="dropdown">
+                              <a href="#" class="d-block dropdown-toggle dropdown-none" id="dropdownActionlogo" data-toggle="dropdown">
+                                <img src="./assets/images/play-options.png" class="img-fluid" alt="logo">
+                                <div class="dropdown-menu" aria-labelledby="dropdownActionlogo">
+                                  <div class="align-mokup-form">
+                                    <form>
+                                      <div class="table-alighds">
+                                        <table class="table">
+                                          <thead>
+                                            <tr>
+                                              <th><div>used</div></th>
+                                              <th><div>fields</div></th>
+                                            </tr>
+                                          </thead>
+                                          <tbody>
+                                            <tr><td><input type="checkbox" checked="1" disabled="disabled"></td>
+                                              <td><span class="value">#</span></td>
+                                            </tr>
+                                            <tr><td><input name="priority" type="checkbox"></td>
+                                              <td><span class="value">Priority Order</span></td>
+                                            </tr>
+                                          </tbody>
+                                        </table>
+                                      </div>
+                                    </form>
+                                  </div>
+                                  <div class="close-md-section">
+                                    <button type="submit" class="btn btn-secondary"><i class="bi bi-x"></i> Cancel</button>
+                                    <button type="submit" class="btn btn-primary"><i class="bi bi-chevron-right"></i> Okay</button>
+                                  </div>
+                                </div>
+                                </a>
+                            </div>
                           </th>
                         </tr>
                       </thead>
                       <tbody>
                         <tr>
                           <th scope="row">
-                            &nbsp;
+                            <a href="#" class="order-valuse-show">
+                            <span >0</span>
+                            </a>
                           </th>
                           <td>
                             <div class="formmt-inupt">
@@ -147,18 +179,80 @@
                             </div>
                           </td>
                           <td>
-                            <div class="formmt-inupt">
-                              <input type="text" class="form-control">
+                            <div class="formmt-inupt dropdown">
+                              <input type="text" class="form-control  dropdown-toggle" id="dropdownAction1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              <div class="dropdown-menu" aria-labelledby="dropdownAction1">
+                                <div class="align-mokup-form">
+                                  <form>
+                                    <ul class="form-lh">
+                                      <li>
+                                        <label class="w_40">From</label>
+                                        <span class="input">
+                                          <div class="dollar-d">$</div>
+                                          <input type="text" class="w_60 form-control" name="from"  value="" />
+                                        </span>
+                                      </li>
+                                      <li>
+                                        <label class="w_40">To</label>
+                                        <span class="input">
+                                          <div class="dollar-d">$</div>
+                                          <input type="text" class="w_60 form-control" name="to" value="" />
+                                        </span>
+                                      </li>
+                                    </ul>
+                                  </form>
+                                </div>
+                                <div class="close-md-section">
+                                  <button type="submit" class="btn btn-secondary"><i class="bi bi-x"></i> Cancel</button>
+                                  <button type="submit" class="btn btn-primary"><i class="bi bi-chevron-right"></i> Okay</button>
+                                </div>
+                              </div>
                             </div>
                           </td>
                           <td>
-                            <div class="formmt-inupt">
-                              <input type="text" class="form-control">
+                            <div class="formmt-inupt dropdown">
+                              <input type="text" class="form-control  dropdown-toggle" id="dropdownAction2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              <div class="dropdown-menu" aria-labelledby="dropdownActio2">
+                                <div class="align-mokup-form">
+                                  <form>
+                                    <ul class="form-lh">
+                                      <li>
+                                        <select name="a1" id="a1" class="form-control">
+                                          <option value="1">loading</option>
+                                          <option value="1">loading1</option>
+                                        </select>
+                                      </li>
+                                    </ul>
+                                  </form>
+                                </div>
+                                <div class="close-md-section">
+                                  <button type="submit" class="btn btn-secondary"><i class="bi bi-x"></i> Cancel</button>
+                                  <button type="submit" class="btn btn-primary"><i class="bi bi-chevron-right"></i> Okay</button>
+                                </div>
+                              </div>
                             </div>
                           </td>
                           <td>
-                            <div class="formmt-inupt">
-                              <input type="text" class="form-control">
+                            <div class="formmt-inupt dropdown">
+                              <input type="text" class="form-control  dropdown-toggle" id="dropdownAction3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              <div class="dropdown-menu" aria-labelledby="dropdownAction3">
+                                <div class="align-mokup-form">
+                                  <form>
+                                    <ul class="form-lh">
+                                      <li>
+                                        <select name="a1" id="a1" class="form-control">
+                                          <option value="1">loading</option>
+                                          <option value="1">loading1</option>
+                                        </select>
+                                      </li>
+                                    </ul>
+                                  </form>
+                                </div>
+                                <div class="close-md-section">
+                                  <button type="submit" class="btn btn-secondary"><i class="bi bi-x"></i> Cancel</button>
+                                  <button type="submit" class="btn btn-primary"><i class="bi bi-chevron-right"></i> Okay</button>
+                                </div>
+                              </div>
                             </div>
                           </td>
                           <td>
@@ -238,8 +332,8 @@
                           </td>
                           <td>
                             <span class="value">
-                              <div class="box-space waiting"></div>
-                              Awaiting Processing
+                              <div class="box-space red"></div>
+                              Cancelled
                             </span>
                           </td>
                           <td>
@@ -257,42 +351,40 @@
                     </table>
                   </div>
                 </div>
-
                 <div class="pagination-main">
-                <div class="page-view">
+                  <div class="page-view">
                     <div class="pag_previous">
-                        <div class="btn btn--secondary btn--narrow btn--disabled">
-                            <i class="bi bi-arrow-left"></i>
-                          <span class="icon__fallback-text">Previous</span>
-                        </div>
+                      <div class="btn btn--secondary btn--narrow btn--disabled">
+                        <i class="bi bi-arrow-left"></i>
+                        <span class="icon__fallback-text">Previous</span>
                       </div>
-                      <div class="pagination_collection clearfix">
-                        <div class="parts">
-                          <span class="item current"><b>1</b></span>
-                          <a href="#" class="item link">2</a>
-                        </div>
+                    </div>
+                    <div class="pagination_collection clearfix">
+                      <div class="parts">
+                        <span class="item current"><b>1</b></span>
+                        <a href="#" class="item link">2</a>
                       </div>
-                      <div class="pag_next">
-                        <a href="#" class="btn btn--secondary btn--narrow">
-                        <span class="icon__fallback-text">Next</span>
-                        <i class="bi bi-arrow-right"></i>
-                        </a>
-                      </div>
-                </div>
-
-                <div class="perpage-view">
-                    <span class="page_entries_info"> 
+                    </div>
+                    <div class="pag_next">
+                      <a href="#" class="btn btn--secondary btn--narrow">
+                      <span class="icon__fallback-text">Next</span>
+                      <i class="bi bi-arrow-right"></i>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="perpage-view">
+                    <span class="page_entries_info">
                       <div class="textpage">Per Page </div>
-                    <select id="select_per_page_6" class="form-control pagination_6">
-                    <option value="10">10</option>
-                    <option value="25">25</option>
-                    <option value="50">50</option>
-                   </select>
-                   <div class="orderspace">
-                    &nbsp;Displaying <b>1</b> to <b>25</b> of <b>2822</b> orders
-                   </div>
-                </span>
-                </div>
+                      <select id="select_per_page_6" class="form-control pagination_6">
+                        <option value="10">10</option>
+                        <option value="25">25</option>
+                        <option value="50">50</option>
+                      </select>
+                      <div class="orderspace">
+                        &nbsp;Displaying <b>1</b> to <b>25</b> of <b>2822</b> orders
+                      </div>
+                    </span>
+                  </div>
                 </div>
               </div>
               <div class="tab-pane fade" id="closed" role="tabpanel" aria-labelledby="closed-tab">...</div>
