@@ -38,11 +38,11 @@ span.value{
 .pagination-main{
 background-color: #fff;
 padding: 20px 12px;
+display: flex;
+justify-content: space-between;
+font-size: 12px;
 }
-.pagination-main{
-    display: flex;
-    justify-content: space-between;
-}
+
 .page-view > div {
     display: inline-block;
     vertical-align: middle;
@@ -110,4 +110,82 @@ padding: 20px 12px;
    font-weight: 500;
    text-decoration: none !important;
    line-height: 1;
+}
+.inside-information{
+    background: #f2f4f5;
+    padding: 12px;
+    padding-right: 0px;
+}
+.box-body-inside .order-dream-h{
+    border: 1px solid;
+    border-color: #e5e6e9 #dfe0e4 #d0d1d5;
+    border-radius: 3px;
+    background: #fff;
+}
+.inner-product-details{
+    padding: 0.5em 12px;
+    display: flex;
+    justify-content: space-between;
+}
+.production-detail-infolg > span:not(:last-child){
+    margin-right: 15px;
+}
+.production-detail-infolg > span .branchbaox{
+    background-color: #c2e572;
+    display: inline-block;
+    padding: 5px 8px;
+    font-size: 12px;
+    margin-right: 5px;
+}
+.production-detail-infolg > span.box-production{
+    background: #f8f8f8;
+    padding-right: 5px;
+    font-size: 12px;
+}
+.production-detail-infolg > span.orderhold-c{
+  font-weight: 500;
+}
+.order_details_pane{
+    padding: 0 12px 0 12px;
+    margin-bottom: 0.5em;
+    border-top: 1px solid #ccc;
+}
+ul.form.float li {
+    display: inline-block;
+    margin: 0;
+    padding: 0.5em 18px 0.5em 0;
+    position: relative;
+    font-size: 12px;
+}
+ul.form.float li label {
+    margin: 0 10px 0 0;
+    width: auto;
+    font-weight: 500;
+}
+.tools-section-right{
+    padding: 0 10px;
+}
+.tools-section-right h3{
+    color: #666666;
+    font-size: 1em;
+    line-height: 1.2em;
+    margin: 1.5em 0 0;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+.order_actions li:not(:last-child){
+    border-bottom: 1px solid #ccc;
+}
+.order_actions li a{
+    color: #000;
+    display: block;
+    padding: 10px 0;
+    font-weight: normal;
+    position: relative;
+    border-radius: 3px;
+    font-size: 13px;
+    text-decoration: none;
+}
+.order_actions li a span{
+    margin-left: 10px;
 }

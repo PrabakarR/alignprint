@@ -14,6 +14,8 @@ export class OrdersComponent implements OnInit {
     $('.dropdown-menu').find('form').click(function (e) {
       e.stopPropagation();
     });
+
+ 
     
   }
 

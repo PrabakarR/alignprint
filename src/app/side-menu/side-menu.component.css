@@ -22,7 +22,7 @@
     margin-bottom: 10px;
     padding: 0px 0px 0px 15px;
 }
-.space-main-x li:not(:last-child){
+.space-main-x li{
     margin-bottom: 5px;
 }
 .space-main-x li a {
