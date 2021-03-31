@@ -169,9 +169,8 @@ ul.form.float li label {
     color: #666666;
     font-size: 1em;
     line-height: 1.2em;
-    margin: 1.5em 0 0;
     font-weight: bold;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
 }
 .order_actions li:not(:last-child){
     border-bottom: 1px solid #ccc;
@@ -183,7 +182,7 @@ ul.form.float li label {
     font-weight: normal;
     position: relative;
     border-radius: 3px;
-    font-size: 13px;
+    font-size: 12px;
     text-decoration: none;
 }
 .order_actions li a span{

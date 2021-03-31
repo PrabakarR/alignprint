@@ -1,45 +1,53 @@
-.header{
+.header {
     background: #3f98e7;
 }
-.nav-list-main{
+
+.nav-list-main {
     display: flex;
     align-items: center;
 }
-.nav-list-main .logo-small{
+
+.nav-list-main .logo-small {
     padding: 5px;
 }
-.navlisttwo{
+
+.navlisttwo {
     margin-left: auto;
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
     width: 100%;
 }
-.navlisttwo .wrap-bar{
-    margin-left: 10.65rem;
+
+.navlisttwo .wrap-bar {
+    margin-left: 10.75rem;
 }
-.navlisttwo .search-bar{
+
+.navlisttwo .search-bar {
     margin-top: 5px;
     height: 40px;
     margin-bottom: 5px;
     position: relative;
     width: 100%;
 }
-.search-icon{
+
+.search-icon {
     position: absolute;
     left: 15px;
     top: 50%;
-    transform: translate(0,-50%);
-    -webkit-transform: translate(0,-50%);
-    -moz-transform: translate(0,-50%);
-    -ms-transform: translate(0,-50%);
-    -o-transform: translate(0,-50%);
+    transform: translate(0, -50%);
+    -webkit-transform: translate(0, -50%);
+    -moz-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    -o-transform: translate(0, -50%);
     pointer-events: none;
 }
-.search-icon i{
+
+.search-icon i {
     color: #fff;
 }
-.navlisttwo .search-bar .form-control{
+
+.navlisttwo .search-bar .form-control {
     background-color: #56B0FF;
     border-radius: 5px;
     color: #000;
@@ -51,55 +59,67 @@
     height: 100%;
     padding-left: 50px;
 }
-.navlisttwo .search-bar .form-control::-webkit-input-placeholder { /* Edge */
+
+.navlisttwo .search-bar .form-control::-webkit-input-placeholder {
+    /* Edge */
     color: #fff;
-  }
-  
-  .navlisttwo .search-bar .form-control:-ms-input-placeholder { /* Internet Explorer 10-11 */
+}
+
+.navlisttwo .search-bar .form-control:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
     color: #fff;
-  }
-  
-  .navlisttwo .search-bar .form-control::placeholder {
+}
+
+.navlisttwo .search-bar .form-control::placeholder {
     color: #fff;
-  }
-  .navbar-innerlistthree .nav-item{
-      padding: 0 15px;
-      height: 50px;
+}
+
+.navbar-innerlistthree .nav-item {
+    padding: 0 15px;
+    height: 50px;
     display: flex;
     align-items: center;
-  }
- .drop2 .dropdown-toggle::after{
+}
+
+.drop2 .dropdown-toggle::after {
     display: none;
 }
-.nav-link{
+
+.nav-link {
     color: #fff;
     font-weight: 500;
     letter-spacing: 0.42px;
 }
+
 .drop2 .dropdown-toggle {
     font-size: 18px;
 }
-.navbar-innerlistthree .navbar-nav{
-  flex-direction: row;
-  align-items: center;
+
+.navbar-innerlistthree .navbar-nav {
+    flex-direction: row;
+    align-items: center;
 }
-.navbar-innerlistthree{
+
+.navbar-innerlistthree {
     padding-left: 20px;
 }
-.navbar-innerlistthree .navbar-nav li > a{
+
+.navbar-innerlistthree .navbar-nav li>a {
     padding: 0;
 }
-.navbar-innerlistthree .navbar-nav li.drop3::before{
-   content: "";
-   position: absolute;
-   top: 50%;
-   height: 100%;
-   transform: translate(0px, -50%);
-   width: 1px;
-   background: #ccc;
-   left: 0;
+
+.navbar-innerlistthree .navbar-nav li.drop3::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    height: 100%;
+    transform: translate(0px, -50%);
+    width: 1px;
+    background: #ccc;
+    left: 0;
 }
-.navbar-innerlistthree .navbar-nav li.drop3::after{
+
+.navbar-innerlistthree .navbar-nav li.drop3::after {
     content: "";
     position: absolute;
     top: 50%;
@@ -108,8 +128,9 @@
     width: 1px;
     background: #ccc;
     right: 0;
- }
- .business{
+}
+
+.business {
     color: #000;
     border-left: 1px solid #8cc9ff;
     background-color: #ffcc00;
@@ -117,8 +138,9 @@
     align-items: center;
     display: flex;
     padding: 0 20px !important;
- }
- .navbar-nav .dropdown-menu{
+}
+
+.navbar-nav .dropdown-menu {
     margin: 0;
     top: 100% !important;
     transform: translate3d(-50px, 0px, 0px) !important;
@@ -134,7 +156,8 @@
     min-width: 25rem;
     padding: 0;
 }
-.aligh-head h3{
+
+.aligh-head h3 {
     padding: 10px 10px;
     width: 100%;
     margin: 0;
@@ -145,16 +168,25 @@
     letter-spacing: normal;
     font-weight: 600;
 }
-.story-list ul li{
+
+.story-list ul li {
     width: 100%;
     border-bottom: 1px solid #eee;
     display: flex;
     justify-content: space-between;
 }
-.story-list ul li a,.dropdown-item{
+
+.story-list ul li a,
+.dropdown-item {
     font-size: 12px;
     padding: 8px 12px 10px 10px !important;
     font-size: 12px;
     font-weight: 500;
     white-space: normal;
+}
+
+@media screen and (max-width: 1400px) {
+    .navlisttwo .wrap-bar {
+        margin-left: 11rem;
+    }
 }
