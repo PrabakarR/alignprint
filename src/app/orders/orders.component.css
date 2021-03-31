@@ -1,155 +1,185 @@
-.order-right-main{
+.order-right-main {
     background: #f2f4f5;
     padding: 12px;
     height: 100%;
 }
-.order-list-container{
+
+.order-list-container {
     display: flex;
     justify-content: space-between;
-    align-items: center; 
+    align-items: center;
 }
 
-.right-align-buttons .btn:not(:last-child){
+.right-align-buttons .btn:not(:last-child) {
     margin-right: 5px;
 }
-.table-align-data-lsit{
+
+.table-align-data-lsit {
     background: #fff;
     min-height: 55em;
     overflow-x: auto;
     margin-top: 15px;
 }
-.table td, .table th{
+
+.table td,
+.table th {
     font-size: 11px;
     padding: 0.75em 6px;
     letter-spacing: 0.32px;
     position: relative;
 }
-.table td a, .table th a{
+
+.table td a,
+.table th a {
     font-weight: 500;
 }
-.table th{
+
+.table th {
     text-align: center;
     position: relative;
 }
-span.value{
+
+span.value {
     display: inline-flex;
     align-items: center;
 }
-.pagination-main{
-background-color: #fff;
-padding: 20px 12px;
-display: flex;
-justify-content: space-between;
-font-size: 12px;
+
+.pagination-main {
+    background-color: #fff;
+    padding: 20px 12px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
 }
 
-.page-view > div {
+.page-view>div {
     display: inline-block;
     vertical-align: middle;
     text-align: center;
 }
-.page-view .pag_previous,.page-view  .pag_next{
+
+.page-view .pag_previous,
+.page-view .pag_next {
     border: 1px solid #eeeeee;
-    box-shadow: 0 3px 6px 0 rgba(140,152,164,.25)!important;
+    box-shadow: 0 3px 6px 0 rgba(140, 152, 164, .25)!important;
     background: #fff;
     font-weight: 600;
 }
-.page-view .pag_previous i{
+
+.page-view .pag_previous i {
     margin-right: 5px;
 }
-.page-view .pag_next i{
+
+.page-view .pag_next i {
     margin-left: 5px;
 }
-.pagination_collection{
+
+.pagination_collection {
     margin: 0 10px;
 }
+
 .page-view .current {
     border-color: #ffcc00;
     background-color: #ffcc00;
     color: black;
     cursor: not-allowed;
 }
-.page-view .current, .page-view a{
+
+.page-view .current,
+.page-view a {
     padding: 6px 12px;
     color: #000;
 }
-.perpage-view{
+
+.perpage-view {
     display: flex;
     flex-wrap: nowrap;
     flex: 0 0 50%;
     justify-content: flex-end;
     align-items: center;
 }
-.perpage-view span > div{
+
+.perpage-view span>div {
     display: inline-block;
     margin-right: 10px;
 }
-.perpage-view span select{
+
+.perpage-view span select {
     width: 80px;
     display: inline-block;
     margin-right: 10px;
 }
-.order-valuse-show{
-   position: absolute;
-   top: -15px;
-   left: 50%;
-   transform: translate(-50%,0);
-   -webkit-transform: translate(-50%,0);
-   -moz-transform: translate(-50%,0);
-   -ms-transform: translate(-50%,0);
-   -o-transform: translate(-50%,0);
-   background: #ccc url('/assets/images/button_metal.png') no-repeat;
-   width: 23px;
-   height: 23px;
-   border-radius: 50%;
-   background-size: cover;
-   align-items: center;
-   display: flex;
-   justify-content: center;
-   color: #000;
-   font-weight: 500;
-   text-decoration: none !important;
-   line-height: 1;
+
+.order-valuse-show {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    -webkit-transform: translate(-50%, 0);
+    -moz-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    -o-transform: translate(-50%, 0);
+    background: #ccc url('/assets/images/button_metal.png') no-repeat;
+    width: 23px;
+    height: 23px;
+    border-radius: 50%;
+    background-size: cover;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    color: #000;
+    font-weight: 500;
+    text-decoration: none !important;
+    line-height: 1;
 }
-.inside-information{
+
+.inside-information {
     background: #f2f4f5;
     padding: 12px;
     padding-right: 0px;
 }
-.box-body-inside .order-dream-h{
+
+.box-body-inside .order-dream-h {
     border: 1px solid;
     border-color: #e5e6e9 #dfe0e4 #d0d1d5;
     border-radius: 3px;
     background: #fff;
 }
-.inner-product-details{
+
+.inner-product-details {
     padding: 0.5em 12px;
     display: flex;
     justify-content: space-between;
 }
-.production-detail-infolg > span:not(:last-child){
+
+.production-detail-infolg>span:not(:last-child) {
     margin-right: 15px;
 }
-.production-detail-infolg > span .branchbaox{
+
+.production-detail-infolg>span .branchbaox {
     background-color: #c2e572;
     display: inline-block;
     padding: 5px 8px;
     font-size: 12px;
     margin-right: 5px;
 }
-.production-detail-infolg > span.box-production{
+
+.production-detail-infolg>span.box-production {
     background: #f8f8f8;
     padding-right: 5px;
     font-size: 12px;
 }
-.production-detail-infolg > span.orderhold-c{
-  font-weight: 500;
+
+.production-detail-infolg>span.orderhold-c {
+    font-weight: 500;
 }
-.order_details_pane{
+
+.order_details_pane {
     padding: 0 12px 0 12px;
     margin-bottom: 0.5em;
     border-top: 1px solid #ccc;
 }
+
 ul.form.float li {
     display: inline-block;
     margin: 0;
@@ -157,25 +187,30 @@ ul.form.float li {
     position: relative;
     font-size: 12px;
 }
+
 ul.form.float li label {
     margin: 0 10px 0 0;
     width: auto;
     font-weight: 500;
 }
-.tools-section-right{
+
+.tools-section-right {
     padding: 0 10px;
 }
-.tools-section-right h3{
+
+.tools-section-right h3 {
     color: #666666;
     font-size: 1em;
     line-height: 1.2em;
     font-weight: bold;
     margin-bottom: 12px;
 }
-.order_actions li:not(:last-child){
+
+.order_actions li:not(:last-child) {
     border-bottom: 1px solid #ccc;
 }
-.order_actions li a{
+
+.order_actions li a {
     color: #000;
     display: block;
     padding: 10px 0;
@@ -185,6 +220,13 @@ ul.form.float li label {
     font-size: 12px;
     text-decoration: none;
 }
-.order_actions li a span{
+
+.order_actions li a span {
     margin-left: 10px;
+}
+
+.sho-results-order-use {
+    background: #FFFFFF!important;
+    padding: 10px;
+    margin-top: 10px;
 }

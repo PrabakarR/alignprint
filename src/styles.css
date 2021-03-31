@@ -1,7 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
-@import "~bootstrap-icons/font/bootstrap-icons.css";
 
-html,body{
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+html,
+body {
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeSpeed;
     overflow-wrap: break-word;
@@ -12,43 +13,55 @@ html,body{
     overflow-x: hidden;
     letter-spacing: 0.22px;
 }
-ol, ul {
+
+ol,
+ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
-.main{
+
+.main {
     padding-top: 50px;
 }
-.sidemenu-width{
+
+.sidemenu-width {
     flex: 0 0 200px;
     max-width: 200px;
 }
-.sidemenu-width.hides{
+
+.sidemenu-width.hides {
     display: none;
 }
-.side-menu-right{
+
+.side-menu-right {
     flex: 0 0 100%;
-    max-width: calc(100% - 200px);   
+    max-width: calc(100% - 200px);
 }
-.side-menu-right.shows{
+
+.side-menu-right.shows {
     flex: 0 0 100%;
-    max-width: 100%;   
+    max-width: 100%;
 }
-.tools-side-bar{
+
+.tools-side-bar {
     flex: 0 0 210px;
     max-width: 210px;
 }
-.nav-link,.form-control{
+
+.nav-link,
+.form-control {
     font-size: 12px;
 }
-.nav-tabs{
+
+.nav-tabs {
     border-bottom: none;
 }
-.nav-tabs .nav-link{
+
+.nav-tabs .nav-link {
     padding: 8px 13px;
     font-weight: 600;
-    font-size: 13px;
+    font-size: 12px;
     border-radius: 0;
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
@@ -56,15 +69,17 @@ ol, ul {
     -o-border-radius: 0;
     margin-right: 10px;
     border: none;
-    box-shadow: 0 3px 6px 0 rgba(140,152,164,.25)!important;
+    box-shadow: 0 3px 6px 0 rgba(140, 152, 164, .25)!important;
     background: #fff;
     color: #000;
     margin-bottom: 0;
 }
-.nav-tabs .nav-link.active{
-   background-color: #ffcc00;
+
+.nav-tabs .nav-link.active {
+    background-color: #ffcc00;
 }
-.btn{
+
+.btn {
     border-radius: 0;
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
@@ -73,42 +88,53 @@ ol, ul {
     font-weight: 600;
     font-size: 12px;
 }
-.btn,a{
+
+.btn,
+a {
     outline: none;
     box-shadow: none !important;
 }
-.form-control{
+
+.form-control {
     padding: 6px;
 }
-.table-responsive .form-control{
+
+.table-responsive .form-control {
     white-space: nowrap;
     text-overflow: ellipsis;
 }
-.form-control:focus{
+
+.form-control:focus {
     border-color: #000;
     outline: 0;
     box-shadow: none;
 }
-.table-responsive{
+
+.table-responsive {
     overflow-x: unset !important;
 }
-.table-responsive table tr td:nth-child(9){
+
+.table-responsive table tr td:nth-child(9) {
     width: 95px;
 }
-.box-space{
+
+.box-space {
     width: 16px;
     height: 16px;
     background: #c2e572;
     margin-right: 5px;
     flex: 0 0 auto;
 }
-.box-space.waiting{
+
+.box-space.waiting {
     background-color: #eeeeee
 }
-.box-space.red{
+
+.box-space.red {
     background-color: #ff403d;
 }
-.formmt-inupt .dropdown-menu{
+
+.formmt-inupt .dropdown-menu {
     transform: translate3d(0px, 0px, 0px) !important;
     top: 100% !important;
     margin: 0 !important;
@@ -118,36 +144,44 @@ ol, ul {
     left: -65% !important;
     width: 185px !important;
 }
-.close-md-section{
+
+.close-md-section {
     background: #F2F4F5;
     border-top: 1px solid #ccc;
     padding: 10px;
-    text-align: right;    
+    text-align: right;
 }
-.close-md-section .btn:not(:last-child){
+
+.close-md-section .btn:not(:last-child) {
     margin-right: 5px;
 }
+
 .align-mokup-form {
     padding: 15px;
     font-size: 13px;
 }
-.align-mokup-form span.input{
+
+.align-mokup-form span.input {
     display: block;
-    position: relative;  
+    position: relative;
 }
-.align-mokup-form span.input .form-control{
+
+.align-mokup-form span.input .form-control {
     padding-left: 20px;
 }
-.form-lh li:not(:last-child){
+
+.form-lh li:not(:last-child) {
     margin-bottom: 10px;
 }
-.align-mokup-form .dollar-d{
+
+.align-mokup-form .dollar-d {
     position: absolute;
     top: 50%;
-    transform: translate(0,-50%);
+    transform: translate(0, -50%);
     padding: 0 10px;
     pointer-events: none;
 }
-.dropdown-none:after{
+
+.dropdown-none:after {
     display: none;
 }
