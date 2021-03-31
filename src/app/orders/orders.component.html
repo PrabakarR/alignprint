@@ -403,7 +403,7 @@
                     </div>
                     <div class="tab-pane inside-datatabcontent fade show active" data-content="2" *ngIf="isOrderInfo">
                         <div class="inside-information">
-                            <a href="/orders" class="btn btn-secondary mb-3"><i class="bi bi-arrow-left"></i>&nbsp;&nbsp;Back</a>
+                            <a (click)="hideOrderInfo()" class="btn btn-secondary mb-3"><i class="bi bi-arrow-left"></i>&nbsp;&nbsp;Back</a>
                             <div class="box-body-inside row no-gutters">
                                 <div class="col">
                                     <div class="order-dream-h">
