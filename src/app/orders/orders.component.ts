@@ -27,6 +27,10 @@ export class OrdersComponent implements OnInit {
     vm.isOrderInfo = true;
     vm.orderId = orderId;
   }
-
-
+  hideOrderInfo()
+  {
+    let vm = this;
+    vm.isOrders = true;
+    vm.isOrderInfo = false;
+  }
 }
