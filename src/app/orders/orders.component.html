@@ -7,7 +7,7 @@
       </div>
       <div class="col-md-9 side-menu-right">
         <div class="tab-content" id="myTabContentOdd">
-          <div class="tab-pane inside-datatabcontent fade show active" data-content="1" style="display: none;">
+          <div class="tab-pane inside-datatabcontent fade show active" data-content="1" *ngIf="isOrders">
             <div class="order-right-main">
               <div class="order-list-container">
                 <ul class="nav nav-tabs" id="myTab" role="tablist">
@@ -268,7 +268,7 @@
                                 </div>
                               </th>
                               <td>
-                                <span class="value">175348</span>
+                                <span class="value"><a href="javascript:void(0);" (click)="showOrderInfo('175349')">175349</a></span>
                               </td>
                               <td>
                                 <span class="value">Arrive Nutrition Spring Collection</span>
@@ -312,7 +312,7 @@
                                 </div>
                               </th>
                               <td>
-                                <span class="value">175348</span>
+                                <span class="value"><a href="javascript:void(0);" (click)="showOrderInfo('175348')">175348</a></span>
                               </td>
                               <td>
                                 <span class="value">Arrive Nutrition Spring Collection</span>
@@ -396,7 +396,7 @@
             </div>
           </div>
 
-          <div class="tab-pane inside-datatabcontent fade" data-content="2" style="display: block; opacity: 1;">
+          <div class="tab-pane inside-datatabcontent fade show active" data-content="2" *ngIf="isOrderInfo">
             
             <div class="inside-information">
             <div class="box-body-inside row no-gutters">
@@ -410,7 +410,7 @@
                         </div>
                         In Production
                         </span>
-                        <span class="d-inline-block orderhold-c">Order #175353 Dreams Hoodie</span>
+                        <span class="d-inline-block orderhold-c">Order #{{orderId?orderId:''}} Dreams Hoodie</span>
                       </div>
 
                       <div class="buttons-ordet right-align-buttons">

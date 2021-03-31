@@ -6,7 +6,9 @@ declare var $:any;
   styleUrls: ['./orders.component.css']
 })
 export class OrdersComponent implements OnInit {
-
+  public isOrders: boolean = true;
+  public isOrderInfo: boolean = false;
+  public orderId:any;
   constructor() { }
 
   ngOnInit(): void {
@@ -17,6 +19,13 @@ export class OrdersComponent implements OnInit {
 
  
     
+  }
+  showOrderInfo(orderId)
+  {
+    let vm = this;
+    vm.isOrders = false;
+    vm.isOrderInfo = true;
+    vm.orderId = orderId;
   }
 
 }
