@@ -93,6 +93,10 @@ ul {
 a {
     outline: none;
     box-shadow: none !important;
+    text-decoration: none !important;
+}
+p{
+    margin-bottom: 10px;
 }
 
 .form-control {

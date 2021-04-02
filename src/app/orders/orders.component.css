@@ -274,3 +274,55 @@ table td.empty, table tr.current td.empty, table tr.selected td.empty {
     background: red;
     color: #fff;
 }
+table .subtotal td, table .total td, table .selected.subtotal td, table .selected.total td {
+    background: #dcd9d9;
+}
+
+.sho-results-order-use .quote-created-par{
+    padding: 10px 0;
+    background: #fff;
+    border-bottom: 1px solid #f1f1f1;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.sho-results-order-use .quote-created-par .quoate-detabtn{
+    background: #36C3E0;
+    color: #fff;
+    height: 40px;
+    text-align: center;
+    font-size: 12px;
+    width: 200px;
+    vertical-align: middle;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sho-results-order-use .quote-created-par .quote-create-para{
+   margin-left: 20px;
+   font-size: 12px;
+}
+.sho-results-order-use .quote-created-par .quote-create-para .note{
+  font-weight: bold;
+  margin-right: 10px;
+}
+.sho-results-order-use .quote-created-par .quote-create-para p:last-child{
+    margin-bottom: 0;
+}
+.sho-results-order-use .quote-created-par .quote-create-para .note-strike{
+    background: #ebea9f;
+    display: inline-block;
+    font-weight: normal;
+    line-height: 20px;
+    padding: 2px 5px 0 5px;
+    margin: 0 5px 0 0;
+}
+table.table td span.value.label {
+    color: #6a6a6a;
+    font-weight: bold;
+}
+.financial-tabls-w{
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}

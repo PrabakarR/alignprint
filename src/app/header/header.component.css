@@ -94,6 +94,17 @@
 .drop2 .dropdown-toggle {
     font-size: 18px;
 }
+.drop2img .dropdown-toggle{
+    width: 30px;
+    height: 30px;
+}
+.drop2 .dropdown-toggle > img{
+    border-radius: 50%;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    object-position: bottom;  
+}
 
 .navbar-innerlistthree .navbar-nav {
     flex-direction: row;
