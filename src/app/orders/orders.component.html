@@ -1,4 +1,5 @@
 <app-header></app-header>
+<app-ngx-spinner></app-ngx-spinner>
 <main class="main">
   <div class="explore-all">
     <div class="row no-gutters">
@@ -12,13 +13,16 @@
               <div class="order-list-container">
                 <ul class="nav nav-tabs" role="tablist">
                   <li class="nav-item" role="presentation">
-                    <a class="nav-link active" id="open-tab" data-toggle="tab" href="#open" role="tab" aria-controls="open" aria-selected="true">Open  (16)</a>
+                    <a *ngIf="orders" class="nav-link active" id="open-tab" data-toggle="tab" href="#open" role="tab"
+                      aria-controls="open" aria-selected="true">Open ({{orders.data?orders.data.length:0}})</a>
                   </li>
                   <li class="nav-item" role="presentation">
-                    <a class="nav-link" id="closed-tab" data-toggle="tab" href="#closed" role="tab" aria-controls="closed" aria-selected="false">Closed</a>
+                    <a class="nav-link" id="closed-tab" data-toggle="tab" href="#closed" role="tab"
+                      aria-controls="closed" aria-selected="false">Closed</a>
                   </li>
                   <li class="nav-item" role="presentation">
-                    <a class="nav-link" id="all-tab" data-toggle="tab" href="#all" role="tab" aria-controls="all" aria-selected="false">All</a>
+                    <a class="nav-link" id="all-tab" data-toggle="tab" href="#all" role="tab" aria-controls="all"
+                      aria-selected="false">All</a>
                   </li>
                 </ul>
                 <div class="right-align-buttons">
@@ -38,61 +42,50 @@
                             <tr>
                               <th scope="col">&nbsp;</th>
                               <th scope="col">
-                                <a href="#">#</a>
+                                Order ID
                               </th>
                               <th scope="col">
-                                <a href="#">
-                                <span>Job Name</span>
-                                </a>
+                                <span>Customer Name</span>
                               </th>
                               <th scope="col">
-                                <a href="#">
-                                <span>Customer</span>
-                                </a>
+                                <span>Case Color</span>
                               </th>
                               <th scope="col">
-                                <a href="#">
-                                <span>Company</span>
-                                </a>
+                                <span>Address</span>
                               </th>
                               <th scope="col">
-                                <a href="#">
-                                <span>Customer PO Number</span>
-                                </a>
-                              </th>
-                              <th scope="col">
-                                <a>
-                                <span>Status</span>
-                                </a>
-                              </th>
-                              <th scope="col">
-                                <a>
-                                <span>Production</span>
-                                </a>
-                              </th>
-                              <th scope="col">
-                                <a href="#">
-                                <span>Value</span>
-                                </a>
-                              </th>
-                              <th scope="col">
-                                <a href="#">
-                                <span>Outstanding</span>
-                                </a>
-                              </th>
-                              <th scope="col">
-                                <a href="#">
                                 <span>Order Date</span>
-                                </a>
                               </th>
                               <th scope="col">
-                                <a href="#">
-                                <span>Shipped Date</span>
-                                </a>
+                                <span>Order Status</span>
                               </th>
+                              <th scope="col">
+                                <span>Attachment</span>
+                              </th>
+                              <!-- <th scope="col">
+                                <a href="#">
+                                  <span>Value</span>
+                                </a>
+                              </th> -->
+                              <!-- <th scope="col">
+                                <a href="#">
+                                  <span>Outstanding</span>
+                                </a>
+                              </th> -->
+                              <!-- <th scope="col">
+                                <a href="#">
+                                  <span>Order Date</span>
+                                </a>
+                              </th> -->
+                              <!-- <th scope="col">
+                                <a href="#">
+                                  <span>Shipped Date</span>
+                                </a>
+                              </th> -->
                               <th scope="col">
                                 <div class="dropdown">
-                                  <a href="#" class="d-block dropdown-toggle dropdown-none" id="dropdownActionlogo" data-toggle="dropdown">
+                                  <a href="#" class="d-block dropdown-toggle dropdown-none" id="dropdownActionlogo"
+                                    data-toggle="dropdown">
                                     <img src="./assets/images/play-options.png" class="img-fluid" alt="logo">
                                     <div class="dropdown-menu" aria-labelledby="dropdownActionlogo">
                                       <div class="align-mokup-form">
@@ -124,8 +117,10 @@
                                         </form>
                                       </div>
                                       <div class="close-md-section">
-                                        <button type="submit" class="btn btn-secondary"><i class="bi bi-x"></i> Cancel</button>
-                                        <button type="submit" class="btn btn-primary"><i class="bi bi-chevron-right"></i> Okay</button>
+                                        <button type="submit" class="btn btn-secondary"><i class="bi bi-x"></i>
+                                          Cancel</button>
+                                        <button type="submit" class="btn btn-primary"><i
+                                            class="bi bi-chevron-right"></i> Okay</button>
                                       </div>
                                     </div>
                                   </a>
@@ -137,7 +132,7 @@
                             <tr>
                               <th scope="row">
                                 <a href="#" class="order-valuse-show">
-                                <span>0</span>
+                                  <span>0</span>
                                 </a>
                               </th>
                               <td>
@@ -161,34 +156,70 @@
                                 </div>
                               </td>
                               <td>
-                                <div class="formmt-inupt">
-                                  <input type="text" class="form-control">
-                                </div>
-                              </td>
-                              <td>
-                                <div class="formmt-inupt">
-                                  <input type="text" class="form-control">
-                                </div>
-                              </td>
-                              <td>
-                                <div class="formmt-inupt">
-                                  <select name="a" id="a" class="form-control">
-                                    <option value="1">loading</option>
-                                    <option value="1">loading</option>
-                                  </select>
-                                </div>
-                              </td>
-                              <td>
-                                <div class="formmt-inupt">
-                                  <select name="a" id="a" class="form-control">
-                                    <option value="1">loading</option>
-                                    <option value="1">loading</option>
-                                  </select>
-                                </div>
-                              </td>
-                              <td>
                                 <div class="formmt-inupt dropdown">
-                                  <input type="text" class="form-control  dropdown-toggle" id="dropdownAction1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  <input type="text" class="form-control  dropdown-toggle" id="dropdownAction1"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  <div class="dropdown-menu" aria-labelledby="dropdownAction1">
+                                    <div class="align-mokup-form">
+                                      <form>
+                                        <ul class="form-lh">
+                                          <li>
+                                            <label class="w_40">From Date</label>
+                                            <span class="input">
+                                              <!-- <div class="dollar-d">$</div> -->
+                                              <input type="text" class="w_60 form-control" name="from" value="" />
+                                            </span>
+                                          </li>
+                                          <li>
+                                            <label class="w_40">To Date</label>
+                                            <span class="input">
+                                              <!-- <div class="dollar-d">$</div> -->
+                                              <input type="text" class="w_60 form-control" name="to" value="" />
+                                            </span>
+                                          </li>
+                                        </ul>
+                                      </form>
+                                    </div>
+                                    <div class="close-md-section">
+                                      <button type="submit" class="btn btn-secondary"><i class="bi bi-x"></i>
+                                        Cancel</button>
+                                      <button type="submit" class="btn btn-primary"><i class="bi bi-chevron-right"></i>
+                                        Okay</button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </td>
+                              <td>
+                                <div class="formmt-inupt">
+                                  <select name="a" id="a" class="form-control">
+                                    <option value="0">--Select--</option>
+                                    <option value="1">Created</option>
+                                    <option value="2">Confirmed</option>
+                                    <option value="3">SentForPrinting</option>
+                                    <option value="4">Printed</option>
+                                    <option value="5">Completed</option>
+                                    <option value="6">Returned</option>
+                                    <option value="7">NeedMoreInfo</option>
+                                  </select>
+                                </div>
+                              </td>
+                              <td>
+                                <div class="formmt-inupt">
+                                  <input type="text" class="form-control">
+                                </div>
+                              </td>
+                              <!-- <td>
+                                <div class="formmt-inupt">
+                                  <select name="a" id="a" class="form-control">
+                                    <option value="1">loading</option>
+                                    <option value="1">loading</option>
+                                  </select>
+                                </div>
+                              </td> -->
+                              <!-- <td>
+                                <div class="formmt-inupt dropdown">
+                                  <input type="text" class="form-control  dropdown-toggle" id="dropdownAction1"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                   <div class="dropdown-menu" aria-labelledby="dropdownAction1">
                                     <div class="align-mokup-form">
                                       <form>
@@ -197,7 +228,7 @@
                                             <label class="w_40">From</label>
                                             <span class="input">
                                               <div class="dollar-d">$</div>
-                                              <input type="text" class="w_60 form-control" name="from"  value="" />
+                                              <input type="text" class="w_60 form-control" name="from" value="" />
                                             </span>
                                           </li>
                                           <li>
@@ -211,15 +242,18 @@
                                       </form>
                                     </div>
                                     <div class="close-md-section">
-                                      <button type="submit" class="btn btn-secondary"><i class="bi bi-x"></i> Cancel</button>
-                                      <button type="submit" class="btn btn-primary"><i class="bi bi-chevron-right"></i> Okay</button>
+                                      <button type="submit" class="btn btn-secondary"><i class="bi bi-x"></i>
+                                        Cancel</button>
+                                      <button type="submit" class="btn btn-primary"><i class="bi bi-chevron-right"></i>
+                                        Okay</button>
                                     </div>
                                   </div>
                                 </div>
-                              </td>
-                              <td>
+                              </td> -->
+                              <!-- <td>
                                 <div class="formmt-inupt dropdown">
-                                  <input type="text" class="form-control  dropdown-toggle" id="dropdownAction2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  <input type="text" class="form-control  dropdown-toggle" id="dropdownAction2"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                   <div class="dropdown-menu" aria-labelledby="dropdownActio2">
                                     <div class="align-mokup-form">
                                       <form>
@@ -234,21 +268,24 @@
                                       </form>
                                     </div>
                                     <div class="close-md-section">
-                                      <button type="submit" class="btn btn-secondary"><i class="bi bi-x"></i> Cancel</button>
-                                      <button type="submit" class="btn btn-primary"><i class="bi bi-chevron-right"></i> Okay</button>
+                                      <button type="submit" class="btn btn-secondary"><i class="bi bi-x"></i>
+                                        Cancel</button>
+                                      <button type="submit" class="btn btn-primary"><i class="bi bi-chevron-right"></i>
+                                        Okay</button>
                                     </div>
                                   </div>
                                 </div>
-                              </td>
-                              <td>
+                              </td> -->
+                              <!-- <td>
                                 <div class="formmt-inupt dropdown">
-                                  <input type="text" class="form-control  dropdown-toggle" id="dropdownAction3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  <input type="text" class="form-control  dropdown-toggle" id="dropdownAction3"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                   <div class="dropdown-menu" aria-labelledby="dropdownAction3">
                                     <div class="align-mokup-form">
                                       <form>
                                         <ul class="form-lh">
                                           <li>
-                                            <select name="a1" id="a1" class="form-control">
+                                            <select name="a2" id="a2" class="form-control">
                                               <option value="1">loading</option>
                                               <option value="1">loading1</option>
                                             </select>
@@ -257,101 +294,71 @@
                                       </form>
                                     </div>
                                     <div class="close-md-section">
-                                      <button type="submit" class="btn btn-secondary"><i class="bi bi-x"></i> Cancel</button>
-                                      <button type="submit" class="btn btn-primary"><i class="bi bi-chevron-right"></i> Okay</button>
+                                      <button type="submit" class="btn btn-secondary"><i class="bi bi-x"></i>
+                                        Cancel</button>
+                                      <button type="submit" class="btn btn-primary"><i class="bi bi-chevron-right"></i>
+                                        Okay</button>
                                     </div>
                                   </div>
                                 </div>
-                              </td>
+                              </td> -->
                               <td>
                                 <button class="btn btn-primary">Search</button>
                               </td>
                             </tr>
-                            <tr>
+                            <tr *ngFor="let order of orders.data; let i = index">
                               <th scope="row">
                                 <div class="form-check">
-                                  <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1">
+                                  <input class="form-check-input position-static" type="checkbox" id="blankCheckbox"
+                                    value="option1">
                                 </div>
                               </th>
                               <td>
-                                <span class="value"><a href="javascript:void(0);" (click)="showOrderInfo('175349')">175349</a></span>
+                                <span class="value"><a href="javascript:void(0)"
+                                    (click)="showOrderInfo(order)">{{order.id}}</a></span>
                               </td>
                               <td>
-                                <span class="value">Arrive Nutrition Spring Collection</span>
+                                <span class="value">{{order.customerId}}</span>
                               </td>
                               <td>
-                                <span class="value"><a href="#">Shawn  Hatjes</a></span>
+                                <span class="value"><a href="#">{{order.caseColor}}</a></span>
                               </td>
                               <td>
-                                <span class="value">Arrive Nutrition Center</span>
+                                <span class="value">{{order.address}}</span>
                               </td>
                               <td>
-                                <span class="value">4100047549</span>
+                                <span class="value">{{order.orderDate | date: 'yyyy-MM-dd'}}</span>
                               </td>
                               <td>
                                 <span class="value">
+                                  {{order.orderStatus === 1?'Created':
+                                  order.orderStatus === 2?'Confirmed':
+                                  order.orderStatus === 3?'SentForPrinting':
+                                  order.orderStatus === 4?'Printed':
+                                  order.orderStatus === 5?'Completed':
+                                  order.orderStatus === 6?'Returned':
+                                  order.orderStatus === 7?'NeedMoreInfo': '-'}}
+                                </span>
+                                <!-- <span class="value">
                                   <div class="box-space"></div>
                                   In Production
-                                </span>
+                                </span> -->
                               </td>
-                              <td>
-                                <span class="value">
+                              <td class="text-center">
+                                <span class="value"><a href="{{order.attachments}}">Download</a></span>
+                                <!-- <span class="value">
                                   <div class="box-space waiting"></div>
                                   Awaiting Processing
-                                </span>
+                                </span> -->
                               </td>
-                              <td>
+                              <!-- <td>
                                 <span class="value">$2,148.00</span>
                               </td>
                               <td><span class="value">$2,148.00</span></td>
                               <td><span class="value">23-Mar-2021 9:10</span></td>
-                              <td><span class="value">25-Mar-2021 9:10</span></td>
+                              <td><span class="value">25-Mar-2021 9:10</span></td> -->
                               <td class="text-center"><span class="value ">
-                                <a href="#">View</a>
-                                </span>
-                              </td>
-                            </tr>
-                            <tr>
-                              <th scope="row">
-                                <div class="form-check">
-                                  <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1">
-                                </div>
-                              </th>
-                              <td>
-                                <span class="value"><a href="javascript:void(0);" (click)="showOrderInfo('175348')">175348</a></span>
-                              </td>
-                              <td>
-                                <span class="value">Arrive Nutrition Spring Collection</span>
-                              </td>
-                              <td>
-                                <span class="value"><a href="#">Shawn  Hatjes</a></span>
-                              </td>
-                              <td>
-                                <span class="value">Arrive Nutrition Center</span>
-                              </td>
-                              <td>
-                                <span class="value">4100047549</span>
-                              </td>
-                              <td>
-                                <span class="value">
-                                  <div class="box-space"></div>
-                                  In Production
-                                </span>
-                              </td>
-                              <td>
-                                <span class="value">
-                                  <div class="box-space red"></div>
-                                  Cancelled
-                                </span>
-                              </td>
-                              <td>
-                                <span class="value">$2,148.00</span>
-                              </td>
-                              <td><span class="value">$2,148.00</span></td>
-                              <td><span class="value">23-Mar-2021 9:10</span></td>
-                              <td><span class="value">NA</span></td>
-                              <td class="text-center"><span class="value ">
-                                <a href="#">View</a>
+                                  <a href="javascript:void(0)" (click)="showOrderInfo(order)">View</a>
                                 </span>
                               </td>
                             </tr>
@@ -375,8 +382,8 @@
                         </div>
                         <div class="pag_next">
                           <a href="#" class="btn btn--secondary btn--narrow">
-                          <span class="icon__fallback-text">Next</span>
-                          <i class="bi bi-arrow-right"></i>
+                            <span class="icon__fallback-text">Next</span>
+                            <i class="bi bi-arrow-right"></i>
                           </a>
                         </div>
                       </div>
@@ -403,7 +410,8 @@
           </div>
           <div class="tab-pane inside-datatabcontent fade show active" data-content="2" *ngIf="isOrderInfo">
             <div class="inside-information">
-              <a (click)="hideOrderInfo()" class="btn btn-secondary mb-3"><i class="bi bi-arrow-left"></i>&nbsp;&nbsp;Back</a>
+              <a (click)="hideOrderInfo()" class="btn btn-secondary mb-3"><i
+                  class="bi bi-arrow-left"></i>&nbsp;&nbsp;Back</a>
               <div class="box-body-inside row no-gutters">
                 <div class="col">
                   <div class="order-dream-h">
@@ -411,9 +419,15 @@
                       <div class="production-detail-infolg">
                         <span class="d-inline-block box-production">
                           <div class="branchbaox"><i class="bi bi-archive"></i></div>
-                          In Production
+                          {{orderInfo.orderStatus === 1?'Created':
+                          orderInfo.orderStatus === 2?'Confirmed':
+                          orderInfo.orderStatus === 3?'SentForPrinting':
+                          orderInfo.orderStatus === 4?'Printed':
+                          orderInfo.orderStatus === 5?'Completed':
+                          orderInfo.orderStatus === 6?'Returned':
+                          orderInfo.orderStatus === 7?'NeedMoreInfo': '-'}}
                         </span>
-                        <span class="d-inline-block orderhold-c">Order #{{orderId?orderId:''}} Dreams Hoodie</span>
+                        <span class="d-inline-block orderhold-c">Order #{{orderInfo?orderInfo.id:'0'}} Dreams Hoodie</span>
                       </div>
                       <div class="buttons-ordet right-align-buttons">
                         <button type="button" class="btn btn-danger">BALANCE DUE: $207.00 </button>
@@ -428,7 +442,7 @@
                         </li>
                         <li id="order_date_container_view">
                           <label>Order Date</label>
-                          <span id="details_order_date_view" class="value">29-Mar-2021 6:01</span>
+                          <span id="details_order_date_view" class="value">{{orderInfo.orderDate | date: 'yyyy-MM-dd'}}</span>
                         </li>
                         <li id="schedule_date_container_view">
                           <label>Production Date</label>
@@ -448,37 +462,45 @@
                   <div class="customer-detail-structre mt-3">
                     <ul class="nav nav-tabs" role="tablist">
                       <li class="nav-item" role="presentation">
-                        <a class="nav-link active" id="customerdetails-tab" data-toggle="tab" href="#customerdetails" role="tab" aria-controls="customerdetails" aria-selected="true">Customer Details</a>
+                        <a class="nav-link active" id="customerdetails-tab" data-toggle="tab" href="#customerdetails"
+                          role="tab" aria-controls="customerdetails" aria-selected="true">Customer Details</a>
                       </li>
                       <li class="nav-item" role="presentation">
-                        <a class="nav-link" id="history-tab" data-toggle="tab" href="#history" role="tab" aria-controls="history" aria-selected="false">History / Notes</a>
+                        <a class="nav-link" id="history-tab" data-toggle="tab" href="#history" role="tab"
+                          aria-controls="history" aria-selected="false">History / Notes</a>
                       </li>
                       <li class="nav-item" role="presentation">
-                        <a class="nav-link" id="Payments-tab" data-toggle="tab" href="#Payments" role="tab" aria-controls="Payments" aria-selected="false">Payments</a>
+                        <a class="nav-link" id="Payments-tab" data-toggle="tab" href="#Payments" role="tab"
+                          aria-controls="Payments" aria-selected="false">Payments</a>
                       </li>
                       <li class="nav-item" role="presentation">
-                        <a class="nav-link" id="Production-tab" data-toggle="tab" href="#Production" role="tab" aria-controls="Production" aria-selected="false">Production</a>
+                        <a class="nav-link" id="Production-tab" data-toggle="tab" href="#Production" role="tab"
+                          aria-controls="Production" aria-selected="false">Production</a>
                       </li>
                       <li class="nav-item" role="presentation">
-                        <a class="nav-link" id="Financial-Details-tab" data-toggle="tab" href="#Financial-Details" role="tab" aria-controls="Financial-Details" aria-selected="false">Financial Details</a>
+                        <a class="nav-link" id="Financial-Details-tab" data-toggle="tab" href="#Financial-Details"
+                          role="tab" aria-controls="Financial-Details" aria-selected="false">Financial Details</a>
                       </li>
                       <li class="nav-item" role="presentation">
-                        <a class="nav-link" id="Email-History-tab" data-toggle="tab" href="#Email-History" role="tab" aria-controls="Email-History" aria-selected="false">Email History</a>
+                        <a class="nav-link" id="Email-History-tab" data-toggle="tab" href="#Email-History" role="tab"
+                          aria-controls="Email-History" aria-selected="false">Email History</a>
                       </li>
                     </ul>
                     <div class="tab-content">
-                      <div class="tab-pane fade show active" id="customerdetails" role="tabpanel" aria-labelledby="customerdetails-tab">
+                      <div class="tab-pane fade show active" id="customerdetails" role="tabpanel"
+                        aria-labelledby="customerdetails-tab">
                         <div class="sho-results-order-use">
                           <div class="row">
                             <div class="col-md-5">
                               <div class="c_d_box-main d-flex">
                                 <div class="user-bigthumb">
-                                  <img src="./assets/images/user.svg" class="img-fluid" width="60" height="60" alt="user">
+                                  <img src="./assets/images/user.svg" class="img-fluid" width="60" height="60"
+                                    alt="user">
                                 </div>
                                 <div class="c_d_box">
                                   <div class="billing-details">
                                     <h4>Billing Details</h4>
-                                    <p><strong><a href="#" >Mario Lanzas</a></strong></p>
+                                    <p><strong><a href="#">Mario Lanzas</a></strong></p>
                                     <p>Align Technology, Inc.</p>
                                     <p>2820 Orchard Parkway,<br>San Jose, 94534, California, United States</p>
                                     <p>E &nbsp;mlanzas@aligntech.com</p>
@@ -492,7 +514,7 @@
                                 <div class="billing-details">
                                   <h4>Shipping Details
                                   </h4>
-                                  <p><strong><a href="#" >Mario Lanzas</a></strong></p>
+                                  <p><strong><a href="#">Mario Lanzas</a></strong></p>
                                   <p>Amazon Replenishment</p>
                                   <p>Henderson, ., Nevada, United States </p>
                                   <p>P &nbsp;510-456-5699</p>
@@ -513,11 +535,11 @@
                               Quote created
                             </div>
                             <div class="quote-create-para">
-                              <p> <span class="note">Joy Henderson</span> 
+                              <p> <span class="note">Joy Henderson</span>
                                 <span class="note-strike">01-Apr-2021 15:48</span>
                                 <span><a href="#">
-                                <img src="./assets/images/search-file.png" class="img-fluid" alt="logo">
-                                </a></span>
+                                    <img src="./assets/images/search-file.png" class="img-fluid" alt="logo">
+                                  </a></span>
                               </p>
                               <p>The quote has been marked as approved and converted into an order.
                               </p>
@@ -528,11 +550,11 @@
                               Quote created
                             </div>
                             <div class="quote-create-para">
-                              <p> <span class="note">Joy Henderson</span> 
+                              <p> <span class="note">Joy Henderson</span>
                                 <span class="note-strike">01-Apr-2021 15:48</span>
                                 <span><a href="#">
-                                <img src="./assets/images/search-file.png" class="img-fluid" alt="logo">
-                                </a></span>
+                                    <img src="./assets/images/search-file.png" class="img-fluid" alt="logo">
+                                  </a></span>
                               </p>
                               <p>The quote has been marked as approved and converted into an order.
                               </p>
@@ -543,11 +565,11 @@
                               Quote created
                             </div>
                             <div class="quote-create-para">
-                              <p> <span class="note">Joy Henderson</span> 
+                              <p> <span class="note">Joy Henderson</span>
                                 <span class="note-strike">01-Apr-2021 15:48</span>
                                 <span><a href="#">
-                                <img src="./assets/images/search-file.png" class="img-fluid" alt="logo">
-                                </a></span>
+                                    <img src="./assets/images/search-file.png" class="img-fluid" alt="logo">
+                                  </a></span>
                               </p>
                               <p>The quote has been marked as approved and converted into an order.
                               </p>
@@ -558,11 +580,11 @@
                               Quote created
                             </div>
                             <div class="quote-create-para">
-                              <p> <span class="note">Joy Henderson</span> 
+                              <p> <span class="note">Joy Henderson</span>
                                 <span class="note-strike">01-Apr-2021 15:48</span>
                                 <span><a href="#">
-                                <img src="./assets/images/search-file.png" class="img-fluid" alt="logo">
-                                </a></span>
+                                    <img src="./assets/images/search-file.png" class="img-fluid" alt="logo">
+                                  </a></span>
                               </p>
                               <p>The quote has been marked as approved and converted into an order.
                               </p>
@@ -570,14 +592,15 @@
                           </div>
                         </div>
                       </div>
-                      <div class="tab-pane fade" id="Financial-Details" role="tabpanel" aria-labelledby="Financial-Details-tab">
+                      <div class="tab-pane fade" id="Financial-Details" role="tabpanel"
+                        aria-labelledby="Financial-Details-tab">
                         <div class="sho-results-order-use">
                           <div class="table_container financial-tabls-w">
                             <table class="table table-bordered">
                               <tbody id="financials_list">
                                 <tr id="ft_wholesale_price_row">
                                   <td class="text_right">
-                                     <span class="value label">Wholesale Price</span>
+                                    <span class="value label">Wholesale Price</span>
                                   </td>
                                   <td class="text_right">
                                     <span class="value" id="ft_wholesale_price">$2,700.75</span>
@@ -585,16 +608,16 @@
                                 </tr>
                                 <tr>
                                   <td class="text_right">
-                                     <span class="value label">Commission</span>
+                                    <span class="value label">Commission</span>
                                   </td>
                                   <td class="text_right">
                                     <span class="value" id="ft_sales_commission">$0.00</span>
                                   </td>
                                 </tr>
-                                
+
                                 <tr>
                                   <td class="text_right">
-                                     <span class="value label">Cart Total</span>
+                                    <span class="value label">Cart Total</span>
                                   </td>
                                   <td class="text_right">
                                     <span class="value" id="ft_cart_total">$2,181.00</span>
@@ -602,7 +625,7 @@
                                 </tr>
                                 <tr>
                                   <td class="text_right">
-                                     <span class="value label">Shipping Total</span>
+                                    <span class="value label">Shipping Total</span>
                                   </td>
                                   <td class="text_right">
                                     <span class="value" id="ft_shipping_total">$0.00</span>
@@ -610,7 +633,7 @@
                                 </tr>
                                 <tr>
                                   <td class="text_right">
-                                     <span class="value label">Tax Total</span>
+                                    <span class="value label">Tax Total</span>
                                   </td>
                                   <td class="text_right">
                                     <span class="value" id="ft_tax_total">$0.00</span>
@@ -618,7 +641,7 @@
                                 </tr>
                                 <tr>
                                   <td class="text_right">
-                                     <span class="value label">Amount Billed</span>
+                                    <span class="value label">Amount Billed</span>
                                   </td>
                                   <td class="text_right">
                                     <span class="value" id="ft_amount_billed">$1,090.50</span>
@@ -679,13 +702,14 @@
                               </th>
                             </tr>
                           </thead>
-                          <tbody >
+                          <tbody>
                             <tr class="line_item ">
                               <!--attach-->
                               <td></td>
                               <!--pos-->
                               <td class="text_right">
-                                <span class="value"><a class="hop" title="View item in Production" href="#">1 <i class="bi bi-box-arrow-in-up-right"></i></a></span>
+                                <span class="value"><a class="hop" title="View item in Production" href="#">1 <i
+                                      class="bi bi-box-arrow-in-up-right"></i></a></span>
                               </td>
                               <!--thumbnail-->
                               <td>
@@ -702,8 +726,8 @@
                               <!--size-->
                               <td class="wrapless not_overriden">
                                 <span class="value">
-                                <span>57</span>
-                                <b class="arrow">&nbsp;</b>
+                                  <span>57</span>
+                                  <b class="arrow">&nbsp;</b>
                                 </span>
                               </td>
                               <!--description-->
@@ -736,7 +760,8 @@
                               <td></td>
                               <!--pos-->
                               <td class="text_right">
-                                <span class="value"><a class="hop" title="View item in Production" href="#">2 <i class="bi bi-box-arrow-in-up-right"></i></a></span>
+                                <span class="value"><a class="hop" title="View item in Production" href="#">2 <i
+                                      class="bi bi-box-arrow-in-up-right"></i></a></span>
                               </td>
                               <!--thumbnail-->
                               <td>
@@ -753,8 +778,8 @@
                               <!--size-->
                               <td class="wrapless not_overriden">
                                 <span class="value">
-                                <span>44</span>
-                                <b class="arrow">&nbsp;</b>
+                                  <span>44</span>
+                                  <b class="arrow">&nbsp;</b>
                                 </span>
                               </td>
                               <!--description-->
@@ -787,7 +812,8 @@
                               <td></td>
                               <!--pos-->
                               <td class="text_right">
-                                <span class="value"><a class="hop" title="View item in Production" href="#">3 <i class="bi bi-box-arrow-in-up-right"></i></a></span>
+                                <span class="value"><a class="hop" title="View item in Production" href="#">3 <i
+                                      class="bi bi-box-arrow-in-up-right"></i></a></span>
                               </td>
                               <!--thumbnail-->
                               <td>
@@ -804,8 +830,8 @@
                               <!--size-->
                               <td class="wrapless not_overriden">
                                 <span class="value">
-                                <span>24</span>
-                                <b class="arrow">&nbsp;</b>
+                                  <span>24</span>
+                                  <b class="arrow">&nbsp;</b>
                                 </span>
                               </td>
                               <!--description-->
@@ -838,7 +864,8 @@
                               <td></td>
                               <!--pos-->
                               <td class="text_right">
-                                <span class="value"><a class="hop" title="View item in Production" href="#">4 <i class="bi bi-box-arrow-in-up-right"></i></a></span>
+                                <span class="value"><a class="hop" title="View item in Production" href="#">4 <i
+                                      class="bi bi-box-arrow-in-up-right"></i></a></span>
                               </td>
                               <!--thumbnail-->
                               <td>
@@ -855,8 +882,8 @@
                               <!--size-->
                               <td class="wrapless not_overriden">
                                 <span class="value">
-                                <span>49</span>
-                                <b class="arrow">&nbsp;</b>
+                                  <span>49</span>
+                                  <b class="arrow">&nbsp;</b>
                                 </span>
                               </td>
                               <!--description-->
@@ -889,7 +916,8 @@
                               <td></td>
                               <!--pos-->
                               <td class="text_right">
-                                <span class="value"><a class="hop" title="View item in Production" href="#">5 <i class="bi bi-box-arrow-in-up-right"></i></a></span>
+                                <span class="value"><a class="hop" title="View item in Production" href="#">5 <i
+                                      class="bi bi-box-arrow-in-up-right"></i></a></span>
                               </td>
                               <!--thumbnail-->
                               <td>
@@ -906,8 +934,8 @@
                               <!--size-->
                               <td class="wrapless not_overriden">
                                 <span class="value">
-                                <span>135</span>
-                                <b class="arrow">&nbsp;</b>
+                                  <span>135</span>
+                                  <b class="arrow">&nbsp;</b>
                                 </span>
                               </td>
                               <!--description-->
@@ -940,7 +968,8 @@
                               <td></td>
                               <!--pos-->
                               <td class="text_right">
-                                <span class="value"><a class="hop" title="View item in Production" href="#" >6 <i class="bi bi-box-arrow-in-up-right"></i></a></span>
+                                <span class="value"><a class="hop" title="View item in Production" href="#">6 <i
+                                      class="bi bi-box-arrow-in-up-right"></i></a></span>
                               </td>
                               <!--thumbnail-->
                               <td>
@@ -957,8 +986,8 @@
                               <!--size-->
                               <td class="wrapless not_overriden">
                                 <span class="value">
-                                <span>139</span>
-                                <b class="arrow">&nbsp;</b>
+                                  <span>139</span>
+                                  <b class="arrow">&nbsp;</b>
                                 </span>
                               </td>
                               <!--description-->
@@ -991,7 +1020,8 @@
                               <td></td>
                               <!--pos-->
                               <td class="text_right">
-                                <span class="value"><a class="hop" title="View item in Production" href="#">7 <i class="bi bi-box-arrow-in-up-right"></i></a></span>
+                                <span class="value"><a class="hop" title="View item in Production" href="#">7 <i
+                                      class="bi bi-box-arrow-in-up-right"></i></a></span>
                               </td>
                               <!--thumbnail-->
                               <td>
@@ -1008,8 +1038,8 @@
                               <!--size-->
                               <td class="wrapless not_overriden">
                                 <span class="value">
-                                <span>52</span>
-                                <b class="arrow">&nbsp;</b>
+                                  <span>52</span>
+                                  <b class="arrow">&nbsp;</b>
                                 </span>
                               </td>
                               <!--description-->
@@ -1049,7 +1079,7 @@
                                   <ul class="form">
                                     <li>
                                       <span id="invoice_note_input" class="input" style="display: none;">
-                                      <textarea id="invoice_note" rows="3" cols="50"></textarea>
+                                        <textarea id="invoice_note" rows="3" cols="50"></textarea>
                                       </span>
                                       <div id="invoice_note_text">
                                         <p>N/A</p>
@@ -1094,7 +1124,7 @@
                                         <li>
                                           <label class="w_60">length</label>
                                           <span class="input">
-                                          <input id="custom_terms_days_due" name="custom_terms_days_due" class="w_40">
+                                            <input id="custom_terms_days_due" name="custom_terms_days_due" class="w_40">
                                           </span>
                                           <span class="input">
                                             <select id="custom_terms_type" name="custom_terms_type" class="w_160">
@@ -1106,7 +1136,8 @@
                                         <li>
                                           <label class="w_60">description</label>
                                           <span class="textarea">
-                                          <textarea id="custom_terms_description" name="custom_terms_description" rows="3" cols="50"></textarea>
+                                            <textarea id="custom_terms_description" name="custom_terms_description"
+                                              rows="3" cols="50"></textarea>
                                           </span>
                                         </li>
                                       </ul>
@@ -1115,49 +1146,72 @@
                                 </div>
                                 <!---->
                               </td>
-                              <td class="text_right" colspan="2"><span class="value"><strong>Total Qty</strong></span></td>
+                              <td class="text_right" colspan="2"><span class="value"><strong>Total Qty</strong></span>
+                              </td>
                               <td><span id="it_totalqty" class="value">500</span></td>
-                              <td class="text_right" colspan="2" ><span class="value"><strong>Subtotal</strong></span></td>
-                              <td class="text_right" ><span id="it_subtotal" class="value">$950.00</span></td>
+                              <td class="text_right" colspan="2"><span class="value"><strong>Subtotal</strong></span>
+                              </td>
+                              <td class="text_right"><span id="it_subtotal" class="value">$950.00</span></td>
                             </tr>
-                            <tr >
-                              <td class="text_right not_selectable" colspan="3" id="tmp_id_-23"><span id="it_shipping_label" class="value"><span>Shipping</span></span></td>
-                              <td colspan="2" class="not_selectable" id="tmp_id_-24"><span id="it_shipping_method" class="value"><span>UPS Ground</span></span></td>
-                              <td class="text_right much_less" id="it_shipping_td"><span class="value" id="it_shipping_span"><span id="it_shipping">$0.00</span><b id="it_shipping_arrow" class="arrow" style="display: none;">&nbsp;</b></span></td>
+                            <tr>
+                              <td class="text_right not_selectable" colspan="3" id="tmp_id_-23"><span
+                                  id="it_shipping_label" class="value"><span>Shipping</span></span></td>
+                              <td colspan="2" class="not_selectable" id="tmp_id_-24"><span id="it_shipping_method"
+                                  class="value"><span>UPS Ground</span></span></td>
+                              <td class="text_right much_less" id="it_shipping_td"><span class="value"
+                                  id="it_shipping_span"><span id="it_shipping">$0.00</span><b id="it_shipping_arrow"
+                                    class="arrow" style="display: none;">&nbsp;</b></span></td>
                             </tr>
                             <tr id="it_tax_tr_0">
-                              <td colspan="3" class="text_right not_selectable" width="20%" id="tmp_id_-35"><input id="it_apply_tax_0" type="checkbox" checked="1" onchange="orderManager.currentOrder.onToggleApplyTax(this, 0);" style="display: none;"><span class="value" id="it_tax_group_0">Taxes</span></td>
-                              <td colspan="2" class="not_selectable" id="tmp_id_-36"><span id="it_tax_names_0" class="value" style="text-decoration: none;"></span></td>
-                              <td class="text_right" id="it_tax_td_0"><span class="value" id="it_tax_span_0"><span id="it_tax_0" style="text-decoration: none;">$0.00</span><b id="it_tax_arrow_0" class="arrow" style="display: none;">&nbsp;</b></span></td>
+                              <td colspan="3" class="text_right not_selectable" width="20%" id="tmp_id_-35"><input
+                                  id="it_apply_tax_0" type="checkbox" checked="1"
+                                  onchange="orderManager.currentOrder.onToggleApplyTax(this, 0);"
+                                  style="display: none;"><span class="value" id="it_tax_group_0">Taxes</span></td>
+                              <td colspan="2" class="not_selectable" id="tmp_id_-36"><span id="it_tax_names_0"
+                                  class="value" style="text-decoration: none;"></span></td>
+                              <td class="text_right" id="it_tax_td_0"><span class="value" id="it_tax_span_0"><span
+                                    id="it_tax_0" style="text-decoration: none;">$0.00</span><b id="it_tax_arrow_0"
+                                    class="arrow" style="display: none;">&nbsp;</b></span></td>
                             </tr>
                             <tr class="total">
-                              <td class="text_right not_selectable" colspan="5" id="tmp_id_-68"><span class="value"><strong>Grand Total</strong></span></td>
+                              <td class="text_right not_selectable" colspan="5" id="tmp_id_-68"><span
+                                  class="value"><strong>Grand Total</strong></span></td>
                               <td id="it_final_total_td" class="text_right not_overriden">
                                 <span class="popup_button value" id="it_final_total_span">
-                                <i id="it_final_total_clazz" class="not_overriden"></i>
-                                <span id="it_final_total_value">$950.00</span>
-                                <b id="it_final_total_arrow" class="arrow"></b>
+                                  <i id="it_final_total_clazz" class="not_overriden"></i>
+                                  <span id="it_final_total_value">$950.00</span>
+                                  <b id="it_final_total_arrow" class="arrow"></b>
                                 </span>
                               </td>
                             </tr>
                             <tr>
-                              <td class="text_right not_selectable" colspan="5" id="tmp_id_-73"><span id="it_deposit_required_label" class="value">Deposit Required (paid)</span></td>
-                              <td class="text_right" id="tmp_id_-74"><span class="value" id="it_deposit_required_span"><span id="it_deposit_required">$0.00</span><b id="it_deposit_required_arrow" class="arrow" style="display: none;">&nbsp;</b></span></td>
+                              <td class="text_right not_selectable" colspan="5" id="tmp_id_-73"><span
+                                  id="it_deposit_required_label" class="value">Deposit Required (paid)</span></td>
+                              <td class="text_right" id="tmp_id_-74"><span class="value"
+                                  id="it_deposit_required_span"><span id="it_deposit_required">$0.00</span><b
+                                    id="it_deposit_required_arrow" class="arrow"
+                                    style="display: none;">&nbsp;</b></span></td>
                             </tr>
                             <tr class="not_selectable" id="tmp_id_-97">
-                              <td class="text_right" colspan="5" id="tmp_id_-83"><span class="value">Payments</span></td>
-                              <td class="text_right" id="tmp_id_-84"><span class="value" id="it_payments">$0.00</span></td>
+                              <td class="text_right" colspan="5" id="tmp_id_-83"><span class="value">Payments</span>
+                              </td>
+                              <td class="text_right" id="tmp_id_-84"><span class="value" id="it_payments">$0.00</span>
+                              </td>
                             </tr>
                             <tr id="it_refund_required_tr" class="not_selectable" style="display: none;">
-                              <td class="text_right" colspan="5" id="tmp_id_-86"><span class="value">Refund Required</span></td>
-                              <td class="text_right" id="tmp_id_-87"><span class="value" id="it_refund_required">$56.95</span></td>
+                              <td class="text_right" colspan="5" id="tmp_id_-86"><span class="value">Refund
+                                  Required</span></td>
+                              <td class="text_right" id="tmp_id_-87"><span class="value"
+                                  id="it_refund_required">$56.95</span></td>
                               <td class="total_extra_col" id="tmp_id_-88">&nbsp;</td>
                             </tr>
                             <tr class="not_selectable" id="tmp_id_-98">
-                              <td class="text_right" colspan="5" id="tmp_id_-89"><span class="value"><strong>Balance Due</strong></span></td>
-                              <td class="text_right" id="tmp_id_-90"><span id="it_balance_due" class="value">$950.00</span></td>
+                              <td class="text_right" colspan="5" id="tmp_id_-89"><span class="value"><strong>Balance
+                                    Due</strong></span></td>
+                              <td class="text_right" id="tmp_id_-90"><span id="it_balance_due"
+                                  class="value">$950.00</span></td>
                             </tr>
-                            <tr >
+                            <tr>
                               <td colspan="6" class="empty not_selectable" id="tmp_id_-92">&nbsp;</td>
                             </tr>
                           </tbody>
@@ -1169,7 +1223,7 @@
                 <div class="col-md-2 tools-side-bar">
                   <div class="tools-section-right">
                     <h3>
-                      <span>Order Actions  </span>
+                      <span>Order Actions </span>
                     </h3>
                     <ul class="order_actions">
                       <li>
@@ -1185,13 +1239,15 @@
                         <a href="javascript:;"><i class="bi bi-chat-left"></i> <span>Add Note for Customer</span></a>
                       </li>
                       <li>
-                        <a href="javascript:;"><i class="bi bi-file-earmark-arrow-down"></i> <span>Download Invoice (.pdf)</span></a>
+                        <a href="javascript:;"><i class="bi bi-file-earmark-arrow-down"></i> <span>Download Invoice
+                            (.pdf)</span></a>
                       </li>
                       <li>
                         <a href="javascript:;"><i class="bi bi-printer"></i> <span>Print Invoice</span></a>
                       </li>
                       <li>
-                        <a href="javascript:;"><i class="bi bi-file-earmark-arrow-down"></i> <span>Download Proof</span></a>
+                        <a href="javascript:;"><i class="bi bi-file-earmark-arrow-down"></i> <span>Download
+                            Proof</span></a>
                       </li>
                       <li>
                         <a href="javascript:;"><i class="bi bi-alarm"></i> <span>Place Order On Hold</span></a>

@@ -50,5 +50,17 @@ Run `npm i bootbox@5.5.2`
 
 Run `npm i font-awesome@4.7.0`
 
+## Installed ngx-spinner
+
+Run `npm i ngx-spinner@10.0.1'
+
+## Installed angular/animations
+
+Run  `npm i @angular/animations@latest --save`
+
+## Installed rxjs-compat
+
+Run `npm i rxjs-compat`
+
 
 
