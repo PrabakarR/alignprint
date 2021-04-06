@@ -15,6 +15,7 @@ import { NgxSpinnerComponent } from './ngx-spinner/ngx-spinner.component';
 // Other
 import { HttpClientModule } from '@angular/common/http';
 import { ApiService } from './service/api.service';
+import { AddNewOrderComponent } from './add-new-order/add-new-order.component';
 
 @NgModule({
   declarations: [
@@ -24,14 +25,16 @@ import { ApiService } from './service/api.service';
     FooterComponent,
     OrdersComponent,
     SideMenuComponent,
-    NgxSpinnerComponent
+    NgxSpinnerComponent,
+    AddNewOrderComponent,
+    
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     NgxSpinnerModule,
     AppRoutingModule,
-    HttpClientModule 
+    HttpClientModule
   ],
   providers: [ApiService],
   bootstrap: [AppComponent]

@@ -101,6 +101,8 @@ p{
 
 .form-control {
     padding: 6px;
+    box-shadow: 0 3px 6px 0 rgba(140,152,164,.25)!important;
+    height: calc(1.5em + .75rem + 6px);
 }
 
 .table-responsive .form-control {
@@ -194,4 +196,203 @@ p{
 }
 .table-striped tbody tr:nth-of-type(odd) {
     background-color: #f8f8f8;
+}
+
+/*order and inside css common */
+.inside-information {
+    background: #f2f4f5;
+    padding: 12px;
+    padding-right: 0px;
+}
+
+.box-body-inside .order-dream-h {
+    border: 1px solid;
+    border-color: #e5e6e9 #dfe0e4 #d0d1d5;
+    border-radius: 3px;
+    background: #fff;
+}
+
+.inner-product-details {
+    padding: 0.5em 12px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.production-detail-infolg>span:not(:last-child) {
+    margin-right: 15px;
+}
+
+.production-detail-infolg>span .branchbaox {
+    background-color: #c2e572;
+    display: inline-block;
+    padding: 5px 8px;
+    font-size: 12px;
+    margin-right: 5px;
+}
+.production-detail-infolg>span .branchbaox.draft{
+    background-color: #e2e2e2;
+}
+
+.production-detail-infolg>span.box-production {
+    background: #f8f8f8;
+    padding-right: 5px;
+    font-size: 12px;
+}
+
+.production-detail-infolg>span.orderhold-c {
+    font-weight: 500;
+}
+
+.order_details_pane {
+    padding: 0 12px 0 12px;
+    margin-bottom: 0.5em;
+    border-top: 1px solid #ccc;
+}
+.line_items_header .line-items, .line_items_header h3{
+    display: inline-block;
+    font-size: 14px;
+    line-height: 3.0em;
+    text-shadow: 0 1px 0 rgb(255 255 255 / 30%);
+    font-weight: 500;
+    margin: 0 10px;
+}
+.sho-results-order-use {
+    background: #FFFFFF!important;
+    padding: 10px;
+    margin-top: 10px;
+}
+.user-bigthumb{
+    margin-right: 15px;
+}
+.billing-details{
+    padding: 10px 0;
+}
+.billing-details h4{
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+.billing-details p{
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+.outstandingat{
+    font-size: 12px;
+    color: #6a6a6a;
+    font-weight: 500;
+}
+.outstandingat label{
+    margin-right: 10px;
+}
+table td.empty, table tr.current td.empty, table tr.selected td.empty {
+    background: #fff none !important;
+    border-width: 0 !important;
+    height: auto !important;
+    vertical-align: top;
+}
+.box p{
+  margin: 0 10px;
+}
+.much_less{
+    background: red;
+    color: #fff;
+}
+table .subtotal td, table .total td, table .selected.subtotal td, table .selected.total td {
+    background: #dcd9d9;
+}
+
+.sho-results-order-use .quote-created-par{
+    padding: 10px 0;
+    background: #fff;
+    border-bottom: 1px solid #f1f1f1;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.sho-results-order-use .quote-created-par .quoate-detabtn{
+    background: #36C3E0;
+    color: #fff;
+    height: 40px;
+    text-align: center;
+    font-size: 12px;
+    width: 200px;
+    vertical-align: middle;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sho-results-order-use .quote-created-par .quote-create-para{
+   margin-left: 20px;
+   font-size: 12px;
+}
+.sho-results-order-use .quote-created-par .quote-create-para .note{
+  font-weight: bold;
+  margin-right: 10px;
+}
+.sho-results-order-use .quote-created-par .quote-create-para p:last-child{
+    margin-bottom: 0;
+}
+.sho-results-order-use .quote-created-par .quote-create-para .note-strike{
+    background: #ebea9f;
+    display: inline-block;
+    font-weight: normal;
+    line-height: 20px;
+    padding: 2px 5px 0 5px;
+    margin: 0 5px 0 0;
+}
+table.table td span.value.label {
+    color: #6a6a6a;
+    font-weight: bold;
+}
+.financial-tabls-w{
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+textarea{
+    resize: none;
+}
+.sho-results-order-use label{
+    font-size: 12px;
+    font-weight: 600;
+}
+.customer-form-details .btn-primary{
+    font-size: 14px;
+}
+.form-control:disabled, .form-control[readonly]{
+    background: #fff;
+}
+.tools-section-right {
+    padding: 0 10px;
+}
+
+.tools-section-right h3 {
+    color: #666666;
+    font-size: 1em;
+    line-height: 1.2em;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.order_actions li:not(:last-child) {
+    border-bottom: 1px solid #ccc;
+}
+
+.order_actions li a {
+    color: #000;
+    display: block;
+    padding: 10px 0;
+    font-weight: normal;
+    position: relative;
+    border-radius: 3px;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.order_actions li a span {
+    margin-left: 10px;
+}
+
+.form-group{
+    margin-bottom: 20px;
 }

@@ -28,7 +28,7 @@
                 <div class="right-align-buttons">
                   <button class="btn btn-primary disabled">Print selected orders</button>
                   <button class="btn btn-primary disabled">Download selected orders</button>
-                  <button class="btn btn-primary">Add new order</button>
+                  <a href="/add-new-order" class="btn btn-primary">Add new order</a>
                   <button class="btn btn-primary">Refresh listing</button>
                 </div>
               </div>
@@ -466,6 +466,11 @@
                           role="tab" aria-controls="customerdetails" aria-selected="true">Customer Details</a>
                       </li>
                       <li class="nav-item" role="presentation">
+                        <a class="nav-link" id="update-tab" data-toggle="tab" href="#update" role="tab"
+                          aria-controls="update" aria-selected="false">Update Order Status
+                        </a>
+                      </li>
+                      <li class="nav-item" role="presentation">
                         <a class="nav-link" id="history-tab" data-toggle="tab" href="#history" role="tab"
                           aria-controls="history" aria-selected="false">History / Notes</a>
                       </li>
@@ -526,6 +531,45 @@
                             <label>Outstanding Balance</label>
                             <span>$8,381.00</span>
                           </div>
+                        </div>
+                      </div>
+                      <div class="tab-pane fade" id="update" role="tabpanel" aria-labelledby="update-tab">
+                        <div class="sho-results-order-use">
+                          <div class="row justify-content-center">
+                            <div class="col-md-5">
+                            <div class="row">
+    
+                            <div class="col-md-12">
+                            <div class="form-group">
+                            <label for="OrderStatus">Change Order Status: </label>
+                            <select name="OrderStatus" id="OrderStatus" class="form-control">
+                              <option value="0">--Select--</option>
+                              <option value="1">Created</option>
+                              <option value="2">Confirmed</option>
+                              <option value="3">SentForPrinting</option>
+                              <option value="4">Printed</option>
+                              <option value="5">Completed</option>
+                              <option value="6">Returned</option>
+                              <option value="7">NeedMoreInfo</option>
+                            </select>
+                            </div>
+                            </div>
+
+                                                    
+                        <div class="col-md-12">
+                          <div class="form-group">
+                          <label for="Remarks">Remarks: </label>
+                          <textarea name="Remarks" class="form-control" id="Remarks" cols="30" rows="3"></textarea>
+                          </div>
+                          </div>
+    
+                            <div class="col-md-12 d-flex justify-content-center">
+                            <button type="button" class="btn btn-primary">Update</button>
+                            </div>
+                            
+                            </div>
+                            </div>
+                            </div>
                         </div>
                       </div>
                       <div class="tab-pane fade" id="history" role="tabpanel" aria-labelledby="history-tab">
