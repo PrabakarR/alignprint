@@ -4,6 +4,8 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { NgxSpinnerModule } from "ngx-spinner";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DatePipe } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 // Component
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
@@ -12,10 +14,11 @@ import { FooterComponent } from './footer/footer.component';
 import { OrdersComponent } from './orders/orders.component';
 import { SideMenuComponent } from './side-menu/side-menu.component';
 import { NgxSpinnerComponent } from './ngx-spinner/ngx-spinner.component';
+import { NewOrderComponent } from './new-order/new-order.component';
 // Other
 import { HttpClientModule } from '@angular/common/http';
 import { ApiService } from './service/api.service';
-import { AddNewOrderComponent } from './add-new-order/add-new-order.component';
+
 
 @NgModule({
   declarations: [
@@ -26,7 +29,7 @@ import { AddNewOrderComponent } from './add-new-order/add-new-order.component';
     OrdersComponent,
     SideMenuComponent,
     NgxSpinnerComponent,
-    AddNewOrderComponent,
+    NewOrderComponent,
     
   ],
   imports: [
@@ -34,9 +37,10 @@ import { AddNewOrderComponent } from './add-new-order/add-new-order.component';
     BrowserAnimationsModule,
     NgxSpinnerModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [ApiService],
+  providers: [ApiService,DatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

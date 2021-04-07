@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient,HttpHeaders } from '@angular/common/http';
 import { environment } from '../../environments/environment';
 import * as Rx from "rxjs/Rx";
 import { from, Observable, throwError } from 'rxjs';
@@ -13,12 +13,46 @@ export class ApiService {
   getOrders() {
     let url = this.baseUrl + 'Order/get'
     return this.httpClient.get(url).
-        pipe(
-           map((data: any) => {
-             return data;
-           }), catchError( error => {
-             return throwError( 'Something went wrong!' );
-           })
-        )
-    }
+      pipe(
+        map((data: any) => {
+          return data;
+        }), catchError(error => {
+          return throwError('Something went wrong!');
+        })
+      )
+  }
+  placeOrder(postData) {
+    let url = this.baseUrl + 'Order/create';
+    var formData = new FormData();
+    formData.append('CustomerId', postData.CustomerId);
+    formData.append('CaseColor', postData.CaseColor);
+    formData.append('Address', postData.Address);
+    formData.append('OrderDate', postData.OrderDate);
+    formData.append('OrderStatus', postData.OrderStatus);
+    formData.append('Attachments', postData.Attachments);
+    // // for (var key in item) {
+    // //   form_data.append(key, item[key]);
+    // // }
+    // let headers =  new HttpHeaders();
+    // headers.append('contentType',null);
+    return this.httpClient.post(url,formData).
+      pipe(
+        map((data: any) => {
+          return data;
+        }), catchError(error => {
+          return throwError('Something went wrong!');
+        })
+      )
+  }
+  updateOrderStatus(orderId,postData) {
+    let url = this.baseUrl + 'Order/'+orderId+'/status';
+    return this.httpClient.put(url,postData).
+      pipe(
+        map((data: any) => {
+          return data;
+        }), catchError(error => {
+          return throwError('Something went wrong!');
+        })
+      )
+  }
 }
