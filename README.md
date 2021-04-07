@@ -66,5 +66,9 @@ Run `npm i rxjs-compat`
 
 Run `npm i ng2-date-picker`
 
+## Installed ngx-toastr
+
+Run `npm install ngx-toastr --save`
+
 
 

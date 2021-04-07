@@ -27,6 +27,7 @@
     "jquery-slim": "^3.0.0",
     "ngx-bootstrap-icons": "^1.4.0",
     "ngx-spinner": "^10.0.1",
+    "ngx-toastr": "^13.2.1",
     "popper.js": "^1.16.1",
     "rxjs": "~6.5.4",
     "rxjs-compat": "^6.6.7",

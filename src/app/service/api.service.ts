@@ -30,11 +30,6 @@ export class ApiService {
     formData.append('OrderDate', postData.OrderDate);
     formData.append('OrderStatus', postData.OrderStatus);
     formData.append('Attachments', file);
-    // // for (var key in item) {
-    // //   form_data.append(key, item[key]);
-    // // }
-    // let headers =  new HttpHeaders();
-    // headers.append('contentType',null);
     return this.httpClient.post(url,formData).
       pipe(
         map((data: any) => {

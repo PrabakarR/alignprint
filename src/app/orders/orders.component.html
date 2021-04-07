@@ -28,7 +28,7 @@
                 <div class="right-align-buttons">
                   <button class="btn btn-primary disabled">Print selected orders</button>
                   <button class="btn btn-primary disabled">Download selected orders</button>
-                  <a href="/new-order" class="btn btn-primary">Add new order</a>
+                  <a [routerLink]="['/new-order']" class="btn btn-primary">Add new order</a>
                   <button class="btn btn-primary">Refresh listing</button>
                 </div>
               </div>
@@ -318,7 +318,7 @@
                                     (click)="showOrderInfo(order)">{{order.id}}</a></span>
                               </td>
                               <td>
-                                <span class="value">{{order.customerId}}</span>
+                                <span class="value">{{order.customerId === 1?'Customer-1': '-'}}</span>
                               </td>
                               <td>
                                 <span class="value"><a href="#">{{order.caseColor}}</a></span>
