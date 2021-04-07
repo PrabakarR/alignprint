@@ -44,7 +44,7 @@ export class NewOrderComponent implements OnInit {
       "Attachments": vm.currentFile ? [vm.currentFile] : []
     }
     console.log(postData);
-    vm.service.placeOrder(postData).subscribe((data: any) => {
+    vm.service.placeOrder(postData, vm.currentFile).subscribe((data: any) => {
       console.log(data);
       vm.spinner.hide();
     });

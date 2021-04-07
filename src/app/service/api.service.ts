@@ -21,7 +21,7 @@ export class ApiService {
         })
       )
   }
-  placeOrder(postData) {
+  placeOrder(postData, file) {
     let url = this.baseUrl + 'Order/create';
     var formData = new FormData();
     formData.append('CustomerId', postData.CustomerId);
@@ -29,7 +29,7 @@ export class ApiService {
     formData.append('Address', postData.Address);
     formData.append('OrderDate', postData.OrderDate);
     formData.append('OrderStatus', postData.OrderStatus);
-    formData.append('Attachments', postData.Attachments);
+    formData.append('Attachments', file);
     // // for (var key in item) {
     // //   form_data.append(key, item[key]);
     // // }
